@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="72.689">
-    <testcase classname="Test the horizontal&amp;Vertical scrollers" name="Verify the scrollers position." time="72.498">
-        <system-out><![CDATA[And User click the i accept button..........................................passed
-When Click on any article on home page......................................passed
-Then verify the scrollers are present under conversation section............passed
-]]></system-out>
-    </testcase>
-</testsuite>

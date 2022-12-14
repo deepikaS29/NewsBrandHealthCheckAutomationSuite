@@ -26,12 +26,8 @@ Feature: Test login functionality
 
     Examples:
     | Email             | Password |
-    | GauracS@gmail.com | Abc@1234 |
-    #| abcs@gmail.com    | ABC@123  |
-
-
-
-
+    | Preet00934@gmail.com | Asc@5672334|
+    | Deepika.S12@yahoo.com| Abc#34567  |
 
 
 #Scenario: Sign in with Facebook

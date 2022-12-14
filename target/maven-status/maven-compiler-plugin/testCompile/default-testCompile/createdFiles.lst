@@ -1,6 +1,0 @@
-StepDefinition\TheCourierRegisterUSer.class
-StepDefinition\LoginWithFacebook.class
-Runner.class
-Hooks.class
-StepDefinition\HomePageMenuList.class
-StepDefinition\TheCourierLogin.class

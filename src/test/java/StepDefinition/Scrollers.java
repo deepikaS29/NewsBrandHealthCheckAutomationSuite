@@ -57,10 +57,10 @@ public class Scrollers extends CommonLibrary {
         for(Map<Object, Object> data:table.asMaps(String.class,String.class)) {
             String scrollers = (String) data.get("HorizontalScrollers");
             try{
-                wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//h3[contains(text(),'"+scrollers+"')])[1]")));
-                boolean b=driver.findElement(By.xpath("(//h3[contains(text(),'"+scrollers+"')])[1]")).isDisplayed();
+                wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//h3[text()='"+scrollers+"'])[1]")));
+                boolean b=driver.findElement(By.xpath("(//h3[text(),'"+scrollers+"'])[1]")).isDisplayed();
                 JavascriptExecutor js=(JavascriptExecutor)driver;
-                js.executeScript("arguments[0].scrollIntoView(true);",driver.findElement(By.xpath("(//h3[contains(text(),'"+scrollers+"')])[1]")));
+                js.executeScript("arguments[0].scrollIntoView(true);",driver.findElement(By.xpath("(//h3[text(),'"+scrollers+"'])[1]")));
                 flg=true;
             }catch(Exception e){
                 e.printStackTrace();

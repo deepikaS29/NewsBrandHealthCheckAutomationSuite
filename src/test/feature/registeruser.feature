@@ -35,7 +35,9 @@ Feature: Test Register user functionality
     And Login Replaced with My Account link
     Examples:
       | Email                | Password    |
-      | Preeta22@gmail.com | Asc@5672334 |
+      | Preet00934@gmail.com | Asc@5672334 |
+      | Deepika.S12@yahoo.com| Abc#34567    |
+
 
 
 

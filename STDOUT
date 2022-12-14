@@ -1,5 +1,12 @@
 
-Scenario: Verify the scrollers position.                           [90m# src/test/feature/scrollers.feature:26[0m
-  [32mAnd [0m[32mUser click the i accept button[0m                               [90m# StepDefinition.TheCourierLogin.u_ser_click_the_i_accept_button()[0m
-  [32mWhen [0m[32mClick on any article on home page[0m                           [90m# StepDefinition.Scrollers.clickonArticle(io.cucumber.datatable.DataTable)[0m
-  [32mThen [0m[32mverify the scrollers are present under conversation section[0m [90m# StepDefinition.Scrollers.verifyScrollers_InConversation(io.cucumber.datatable.DataTable)[0m
+@Home-page-menu
+Scenario: Verify Menu Options                                   [90m# src/test/feature/homepage.feature:4[0m
+  [32mWhen [0m[32mUser click the i accept button[0m                           [90m# StepDefinition.TheCourierLogin.u_ser_click_the_i_accept_button()[0m
+  [32mAnd [0m[32mClick on Menu option[0m                                      [90m# StepDefinition.HomePageMenuList.clickMenuOption()[0m
+  [32mThen [0m[32mVerify all links like News,Politics,Sports,Lifestyle etc[0m [90m# StepDefinition.HomePageMenuList.verifyMenuOptions(io.cucumber.datatable.DataTable)[0m
+
+Scenario: Verify Menu tabs                                               [90m# src/test/feature/homepage.feature:16[0m
+  [32mWhen [0m[32mUser click the i accept button[0m                                    [90m# StepDefinition.TheCourierLogin.u_ser_click_the_i_accept_button()[0m
+  [32mThen [0m[32mverify and click all tabs like News,Politics,Sports,Lifestyle etc[0m [90m# StepDefinition.HomePageMenuList.verifyMenuTabOptions(io.cucumber.datatable.DataTable)[0m
+
+Scenario Outline: Verify the search details        [90m# src/test/feature/homepage.feature:35[0m
