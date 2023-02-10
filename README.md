@@ -1,4 +1,4 @@
-# NewsBrandAutomationSuite# NewsBrandAutomationSuite 
+# NewsBrandAutomationSuite
 
 The project includes automaiton test cases for Health chaeck of The Courier and P&J .The Test cases include below functinalities to verify 
 
