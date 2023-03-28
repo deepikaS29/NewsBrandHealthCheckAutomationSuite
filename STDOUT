@@ -1,34 +1,64 @@
 
-Scenario Outline: New Account Registration with accept all cookie with add block on [90m# src/test/feature/Product_login_newuser_cookie_addBlock.feature:25[0m
-  [32mWhen [0m[32mMake sure Ad blocker extension is installed[0m                                  [90m# StepDefinition.Product_login_newuser_cookie.verifyAddblocker_extension_installed()[0m
-  [32mWhen [0m[32mUser click the i accept button[0m                                               [90m# StepDefinition.TheCourierLogin.u_ser_click_the_i_accept_button()[0m
-  [32mWhen [0m[32mUser hit the login link[0m                                                      [90m# StepDefinition.TheCourierLogin.user_hit_the_login_link()[0m
-  [32mThen [0m[32mLogin page is open[0m                                                           [90m# StepDefinition.TheCourierLogin.login_page_is_open()[0m
-  [32mWhen [0m[32mUser click on Click here to Register link[0m                                    [90m# StepDefinition.TheCourierRegisterUSer.user_click_on_click_here_to_register_link()[0m
-  [32mThen [0m[32mRegister page is open[0m                                                        [90m# StepDefinition.TheCourierRegisterUSer.register_page_is_open()[0m
-  [32mAnd [0m[32mClear cookies for the site[0m                                                    [90m# StepDefinition.TheCourierRegisterUSer.clear_cookies()[0m
-  [32mGiven [0m[32mEnter register email Id [0m[32m[1m"WTHDH@gmail.com"[0m                                   [90m# StepDefinition.TheCourierRegisterUSer.user_enter_email_id(java.lang.String)[0m
-  [32mGiven [0m[32mEnter register password [0m[32m[1m"Asc@5672334"[0m                                       [90m# StepDefinition.TheCourierRegisterUSer.user_enter_password(java.lang.String)[0m
-  [32mWhen [0m[32mUser hit the Create your account button[0m                                      [90m# StepDefinition.TheCourierRegisterUSer.user_hit_the_create_your_account_button()[0m
-  [32mAnd [0m[32mUser click the i accept button[0m                                                [90m# StepDefinition.TheCourierLogin.u_ser_click_the_i_accept_button()[0m
-  [32mThen [0m[32mUser should navigates to The courier home page[0m                               [90m# StepDefinition.TheCourierRegisterUSer.user_should_navigates_to_the_courier_home_page()[0m
-  [32mAnd [0m[32mLogin Replaced with My Account link[0m                                           [90m# StepDefinition.TheCourierLogin.login_replaced_with_my_account_link()[0m
-  [32mWhen [0m[32mClick on multiple article on home page[0m                                       [90m# StepDefinition.Product_login_newuser_cookie.clickonmultipleArticle(io.cucumber.datatable.DataTable)[0m
-  [32mThen [0m[32mVerify the user is not logged out[0m                                            [90m# StepDefinition.TheCourierLogin.verify_user_not_loggedout()[0m
+@Home-page-menu
+Scenario: Verify Menu Options                                   [90m# src/test/feature/homepage.feature:4[0m
+  [32mWhen [0m[32mUser click the i accept button[0m                           [90m# StepDefinition.TheCourierLogin.u_ser_click_the_i_accept_button()[0m
+  [32mAnd [0m[32mClick on Menu option[0m                                      [90m# StepDefinition.HomePageMenuList.clickMenuOption()[0m
+  [32mThen [0m[32mVerify all links like News,Politics,Sports,Lifestyle etc[0m [90m# StepDefinition.HomePageMenuList.verifyMenuOptions(io.cucumber.datatable.DataTable)[0m
+  [32mAnd [0m[32mTake screenshot of the page[0m                               [90m# StepDefinition.HomePageMenuList.takeScreenshot()[0m
 
-Scenario Outline: New Account Registration with Partial cookies with add block on [90m# src/test/feature/Product_login_newuser_cookie_addBlock.feature:50[0m
-  [32mWhen [0m[32mMake sure Ad blocker extension is installed[0m                                [90m# StepDefinition.Product_login_newuser_cookie.verifyAddblocker_extension_installed()[0m
-  [32mWhen [0m[32mUser click the on manage cookies[0m                                           [90m# StepDefinition.Product_login_newuser_cookie.clickOnManageCookies()[0m
-  [32mWhen [0m[32mUser hit the login link[0m                                                    [90m# StepDefinition.TheCourierLogin.user_hit_the_login_link()[0m
-  [32mThen [0m[32mLogin page is open[0m                                                         [90m# StepDefinition.TheCourierLogin.login_page_is_open()[0m
-  [32mWhen [0m[32mUser click on Click here to Register link[0m                                  [90m# StepDefinition.TheCourierRegisterUSer.user_click_on_click_here_to_register_link()[0m
-  [32mThen [0m[32mRegister page is open[0m                                                      [90m# StepDefinition.TheCourierRegisterUSer.register_page_is_open()[0m
-  [32mAnd [0m[32mClear cookies for the site[0m                                                  [90m# StepDefinition.TheCourierRegisterUSer.clear_cookies()[0m
-  [32mGiven [0m[32mEnter register email Id [0m[32m[1m"TYU12@gmail.com"[0m                                 [90m# StepDefinition.TheCourierRegisterUSer.user_enter_email_id(java.lang.String)[0m
-  [32mGiven [0m[32mEnter register password [0m[32m[1m"Asc@5672334"[0m                                     [90m# StepDefinition.TheCourierRegisterUSer.user_enter_password(java.lang.String)[0m
-  [32mWhen [0m[32mUser hit the Create your account button[0m                                    [90m# StepDefinition.TheCourierRegisterUSer.user_hit_the_create_your_account_button()[0m
-  [32mAnd [0m[32mUser click the on manage cookies[0m                                            [90m# StepDefinition.Product_login_newuser_cookie.clickOnManageCookies()[0m
-  [32mThen [0m[32mUser should navigates to The courier home page[0m                             [90m# StepDefinition.TheCourierRegisterUSer.user_should_navigates_to_the_courier_home_page()[0m
-  [32mAnd [0m[32mLogin Replaced with My Account link[0m                                         [90m# StepDefinition.TheCourierLogin.login_replaced_with_my_account_link()[0m
-  [32mWhen [0m[32mClick on multiple article on home page[0m                                     [90m# StepDefinition.Product_login_newuser_cookie.clickonmultipleArticle(io.cucumber.datatable.DataTable)[0m
-  [32mThen [0m[32mVerify the user is not logged out[0m                                          [90m# StepDefinition.TheCourierLogin.verify_user_not_loggedout()[0m
+Scenario: Verify Menu tabs                                               [90m# src/test/feature/homepage.feature:17[0m
+  [32mWhen [0m[32mUser click the i accept button[0m                                    [90m# StepDefinition.TheCourierLogin.u_ser_click_the_i_accept_button()[0m
+  [32mThen [0m[32mverify and click all tabs like News,Politics,Sports,Lifestyle etc[0m [90m# StepDefinition.HomePageMenuList.verifyMenuTabOptions(io.cucumber.datatable.DataTable)[0m
+  [32mAnd [0m[32mTake screenshot of the page[0m                                        [90m# StepDefinition.HomePageMenuList.takeScreenshot()[0m
+
+Scenario Outline: Verify the search details        [90m# src/test/feature/homepage.feature:37[0m
+  [32mWhen [0m[32mUser click the i accept button[0m              [90m# StepDefinition.TheCourierLogin.u_ser_click_the_i_accept_button()[0m
+  [32mAnd [0m[32mclick on searchIcon and enter keyword [0m[32m[1m"life"[0m [90m# StepDefinition.HomePageMenuList.clickSearchIconanEnter(java.lang.String)[0m
+  [31mAnd [0m[31mclick Go button[0m                              [90m# StepDefinition.HomePageMenuList.clickGobutton()[0m
+      [31morg.openqa.selenium.NoSuchElementException: Cannot locate an element using xpath=(//button[text()='Go'])[2]
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DCT-DIL-7Y9YKL3', ip: '138.250.184.179', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '18.0.2.1'
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:327)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy20.getWrappedElement(Unknown Source)
+	at org.openqa.selenium.remote.internal.WebElementToJsonConverter.apply(WebElementToJsonConverter.java:50)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:992)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:921)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:682)
+	at org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:484)
+	at Pages.HomePage.clickGobtn(HomePage.java:57)
+	at StepDefinition.HomePageMenuList.clickGobutton(HomePageMenuList.java:93)
+	at ✽.click Go button(file:///C:/Test%20Automation/NewsBrand/Automation/TheCourierHealthCheck/src/test/feature/homepage.feature:33)
+[0m
+  [36mThen [0m[36mverify the search details [0m[36m[1m"life"[0m            [90m# StepDefinition.HomePageMenuList.verifySearchdetails(java.lang.String)[0m
+      [31morg.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=111.0.5563.65)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DCT-DIL-7Y9YKL3', ip: '138.250.184.179', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '18.0.2.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 111.0.5563.65, chrome: {chromedriverVersion: 111.0.5563.64 (c710e93d5b63..., userDataDir: C:\Users\DEEPIK~1.DCT\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:61536}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: fae47df583c3c529d4c36f76e29c1d3a
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:609)
+	at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:295)
+	at Hooks.tearDown(Hooks.java:24)
+[0m

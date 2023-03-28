@@ -2,22 +2,29 @@ package StepDefinition;
 
 import Pages.HomePage;
 import Utility.CommonLibrary;
-import com.google.common.base.Verify;
 
 import io.cucumber.datatable.DataTable;
-import io.cucumber.java.en.Given;
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 import org.openqa.selenium.By;
-import org.openqa.selenium.interactions.Actions;
 
-import javax.swing.*;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.Map;
 
 public class HomePageMenuList extends CommonLibrary {
 
     HomePage homePage=new HomePage();
+//   private Scenario scenario;
+//    @Before
+//    public void setUpScenario(Scenario scenario){
+//     this.scenario = scenario;
+//    }
+//
+
+
     @When("Click on Menu option")
     public void clickMenuOption() {
 
@@ -40,13 +47,15 @@ public class HomePageMenuList extends CommonLibrary {
     }
 
     @Then("verify and click all tabs like News,Politics,Sports,Lifestyle etc")
-    public void verifyMenuTabOptions(DataTable table) throws  Exception{
+    public void verifyMenuTabOptions(DataTable table) throws Exception {
         for(Map<Object,Object> data:table.asMaps(String.class,String.class)) {
             String menuoption = (String) data.get("MenuOptions");
             boolean flg=false;
             try{
-                flg=driver.findElement(By.xpath("//ul[@class='nav-bar clearfix wrap']/li[contains(@id,'menu-item')]/a[text()='"+menuoption+"']")).isDisplayed();
-                driver.findElement(By.xpath("//ul[@class='nav-bar clearfix wrap']/li[contains(@id,'menu-item')]/a[text()='"+menuoption+"']")).click();
+                flg=driver.findElement(By.xpath("//ul[@class='nav-bar clearfix wrap']/li[contains(@id,'menu-item')]/a[text()='"+menuoption+"']"))
+                        .isDisplayed();
+                driver.findElement(By.xpath("//ul[@class='nav-bar clearfix wrap']/li[contains(@id,'menu-item')]/a[text()='"+menuoption+"']"))
+                        .click();
                 Thread.sleep(2000);
                 String url=driver.getCurrentUrl();
                 if(menuoption.contains("Courier Investigations")){
@@ -56,12 +65,19 @@ public class HomePageMenuList extends CommonLibrary {
                     menuoption=menuoption.replace("&","-");
                 }
                 Assert.assertTrue(menuoption+" Page is not displayed",url.contains(menuoption.toLowerCase()));
+                takeScreenshot(); // take screenshot after each page is visited
                 driver.navigate().back();
-            }catch(Exception e) {
+            } catch(Exception e) {
                 e.printStackTrace();
             }
             Assert.assertTrue(menuoption+" Menu tab is not displayed under Menu",flg);
         }
+    }
+
+    @And("Take screenshot of the page")
+    public void takeScreenshot() throws Exception{
+        String timestamp = new SimpleDateFormat("yyyyMMdd-HHmmss").format(new Date());
+        homePage.takeScreenshot("screenshot-" + timestamp);
     }
 
     @When("click on searchIcon and enter keyword {string}")
@@ -70,6 +86,7 @@ public class HomePageMenuList extends CommonLibrary {
         homePage.enterSearchbox(val);
         homePage.clickGobtn();
     }
+
 
     @When("click Go button")
     public void clickGobutton() throws  Exception{
@@ -82,3 +99,4 @@ public class HomePageMenuList extends CommonLibrary {
         Assert.assertTrue(val+" details not found",count>0);
     }
 }
+

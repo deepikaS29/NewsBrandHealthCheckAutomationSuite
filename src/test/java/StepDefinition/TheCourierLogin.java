@@ -107,9 +107,9 @@ public class TheCourierLogin extends CommonLibrary {
         boolean MyAccount=loginPage.verifyMyAccount_lnk();
         Assert.assertTrue("My account link is not displayed",MyAccount);
         if (MyAccount) {
-            System.out.println("User account is open");
+            System.out.println("logged in");
         } else {
-            System.out.println("Account not created");
+            System.out.println("logged out");
 
         }
     }

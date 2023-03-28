@@ -59,10 +59,4 @@ public class RegistrationPage extends CommonLibrary {
         return flg;
     }
 
-
-
-
-
-
-
 }

@@ -5,25 +5,27 @@ Feature: Verify Home Page Features
     When User click the i accept button
     And Click on Menu option
     Then Verify all links like News,Politics,Sports,Lifestyle etc
-         |MenuOptions|
-         |News       |
-         | Politics  |
-         | Sport    |
-         | Lifestyle |
-         | Education |
-         | Entertainment|
+      | MenuOptions   |
+      | News          |
+      | Politics      |
+      | Sport         |
+      | Lifestyle     |
+      | Education     |
+      | Entertainment |
+    And Take screenshot of the page
 
   Scenario: Verify Menu tabs
     When User click the i accept button
     Then verify and click all tabs like News,Politics,Sports,Lifestyle etc
-      |MenuOptions|
-      |News       |
-      | Politics  |
-      | Sport    |
-      | Lifestyle |
-      | Education |
-      | Entertainment|
-      | Courier Investigations|
+      | MenuOptions            |
+      | News                   |
+      | Politics               |
+      | Sport                  |
+      | Lifestyle              |
+      | Education              |
+      | Entertainment          |
+      | Courier Investigations |
+    And Take screenshot of the page
 
   Scenario Outline: Verify the search details
     When User click the i accept button
@@ -31,8 +33,8 @@ Feature: Verify Home Page Features
     And click Go button
     Then verify the search details "<SearchKeyword>"
     Examples:
-         |SearchKeyword|
-         | life  |
+      | SearchKeyword |
+      | life          |
 
 
 

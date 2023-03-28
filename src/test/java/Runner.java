@@ -4,9 +4,9 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        features="src/test/feature/Product_login_newuser_cookie_addBlock.feature",
+        features = "src/test/feature/homepage.feature",
         //glue= {"Stepdefinition"},
-        plugin= {"pretty:STDOUT","html:target/cucumber-html-report.html","json:target/cucumber.json","junit:target/cucumber.xml","rerun:target/rerun.txt"},
+        plugin = {"pretty:STDOUT", "html:target/cucumber-html-report.html", "json:target/cucumber.json", "junit:target/cucumber.xml", "rerun:target/rerun.txt"},
         //tags="@login-page",
         dryRun = false
 

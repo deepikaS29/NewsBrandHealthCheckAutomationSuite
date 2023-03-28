@@ -15,17 +15,20 @@ import java.util.ArrayList;
 import java.util.Map;
 
 public class Product_login_newuser_cookie extends CommonLibrary {
-    WebDriverWait wait=new WebDriverWait(driver,60);
+    WebDriverWait wait = new WebDriverWait(driver, 60);
+
     @Then("Click on multiple article on home page")
-    public void clickonmultipleArticle(DataTable table) {
-        for(Map<Object, Object> data:table.asMaps(String.class,String.class)) {
-            String article = (String) data.get("Article");
-            wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//a[contains(text(),'"+article+"')])[1]")));
-            driver.findElement(By.xpath("(//a[contains(text(),'"+article+"')])[1]")).click();
-            String url= driver.getCurrentUrl();
-            driver.navigate().to(url+"?articleisfree");
-            driver.navigate().back();
-            driver.navigate().back();
+    public void clickonmultipleArticle() {
+
+        int c = driver.findElements(By.xpath("//a[@class='post__title-link']")).size();
+        if (c > 0) {
+            for (int i = 1; i < 4; i++) {
+                driver.findElement(By.xpath("(//a[@class='post__title-link'])[" + i + "]")).click();
+                String url = driver.getCurrentUrl();
+                driver.navigate().to(url + "?articleisfree");
+                driver.navigate().back();
+                driver.navigate().back();
+            }
         }
     }
 
@@ -45,16 +48,16 @@ public class Product_login_newuser_cookie extends CommonLibrary {
 
     @When("Make sure Ad blocker extension is installed")
     public void verifyAddblocker_extension_installed() throws InterruptedException {
-       Thread.sleep(5000);
+        Thread.sleep(5000);
         //AdBlock is now installed!
-        ArrayList<String> tabs2 = new ArrayList<String> (driver.getWindowHandles());
+        ArrayList<String> tabs2 = new ArrayList<String>(driver.getWindowHandles());
         driver.switchTo().window(tabs2.get(1));
-        String title=driver.getTitle();
+        String title = driver.getTitle();
         System.out.println(title);
-        Assert.assertEquals(title,"AdBlock is now installed!");
+        Assert.assertEquals(title, "AdBlock is now installed!");
         driver.close();
         driver.switchTo().window(tabs2.get(0));
-        String title1=driver.getTitle();
+        String title1 = driver.getTitle();
         System.out.println(title1);
 
 

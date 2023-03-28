@@ -1,14 +1,18 @@
 package Pages;
 
 import Utility.CommonLibrary;
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebElement;
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.io.File;
+import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 public class HomePage extends CommonLibrary {
 
@@ -53,5 +57,15 @@ public class HomePage extends CommonLibrary {
         js.executeScript("arguments[0].click();",btnGo);
        // btnGo.click();
     }
+
+    public void takeScreenshot(String fileName) throws IOException {
+        byte[] screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
+        File screenshotFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+        String timestamp = new SimpleDateFormat("yyyyMMdd-HHmmss").format(new Date());
+        String filePath = "C:\\Test Automation\\NewsBrand\\Automation\\TheCourierHealthCheck\\target\\" + fileName + "-" + timestamp + ".png";
+        FileUtils.copyFile(screenshotFile, new File(filePath));
+    }
+
+
 
 }
