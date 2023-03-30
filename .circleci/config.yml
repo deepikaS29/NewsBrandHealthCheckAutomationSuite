@@ -3,13 +3,24 @@ version: 2.1
 jobs:
   build:
     docker:
-      - image: maven:3.6-jdk-11
+      - image: circleci/openjdk:11-jdk
+
     steps:
       - checkout
-      - run: mvn clean verify
+
+      - run:
+          name: Build and test
+          command: |
+            mvn clean test
+
+      - store_test_results:
+          path: target/surefire-reports
+
+      - store_artifacts:
+          path: target/cucumber-html-reports/
+          destination: cucumber-reports/
 
 workflows:
-  version: 2
-  build:
+  build_and_test:
     jobs:
       - build
