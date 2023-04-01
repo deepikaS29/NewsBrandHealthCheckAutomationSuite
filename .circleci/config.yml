@@ -9,27 +9,33 @@ jobs:
       - checkout
 
       - run:
+          name: build
+          command: |
+            mvn clean install
+
+  test:
+    docker:
+      - image: circleci/openjdk:11-jdk
+
+    steps:
+      - checkout
+
+      - run:
           name: test
           command: |
-            mvn clean test -Dsurefire.useFile=false -Dsurefire.reportName=TEST-result.xml
+            mvn clean test
 
       - store_test_results:
           path: target/surefire-reports
 
+      - run:
+          name: create report
+          command: |
+            mvn verify
+
       - store_artifacts:
           path: target/cucumber-html-reports/
           destination: cucumber-reports/
-          when: always
-      - run:
-          name: list files in cucumber-reports directory
-          command: |
-            ls -la target/cucumber-html-reports/
-  test:
-    docker:
-      - image: circleci/openjdk:11-jdk
-    steps:
-      - checkout
-      - run: mvn test
 
 workflows:
   version: 2
