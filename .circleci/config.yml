@@ -37,6 +37,8 @@ jobs:
           command: |
             mvn verify
 
+      - run: mvn clean test -Dtest=TestRunner -Dcucumber.options="--plugin io.cucumber.junit.CucumberOptions,--plugin json:target/cucumber-report/cucumber.json" -X
+
       - store_artifacts:
           path: target/cucumber-html-reports/
           destination: cucumber-reports/
