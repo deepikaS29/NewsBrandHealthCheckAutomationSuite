@@ -8,11 +8,11 @@ jobs:
     steps:
       - checkout
       - run: sudo apt-get update
-      - run: apt-get update
-      - run: apt-get install -y maven
+      - run: sudo apt-get install -y maven
       - run: mvn test
+
       - store_test_results:
-          path: target/surefire-reports
+          path: ~/project/target/surefire-reports
 
 workflows:
   version: 2
