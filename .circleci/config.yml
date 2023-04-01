@@ -9,15 +9,13 @@ jobs:
       - checkout
       - run: sudo apt-get update
       - run: sudo apt-get install -y maven
-      - run: mvn test
       - run:
-            name: Run tests
-            command: |
-             mvn test
-             sudo mkdir -p $CIRCLE_TEST_REPORTS/junit/
-             sudo cp target/surefire-reports/*.xml $CIRCLE_TEST_REPORTS/junit/
-             path: /home/circleci/project
-
+          name: Run tests and copy results
+          command: |
+            mvn test
+            sudo mkdir -p $CIRCLE_TEST_REPORTS/junit/
+            sudo cp target/surefire-reports/*.xml $CIRCLE_TEST_REPORTS/junit/
+          path: /home/circleci/project
       - store_test_results:
           path: /home/circleci/project/target/surefire-reports
       - store_artifacts:
