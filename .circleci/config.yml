@@ -9,7 +9,7 @@ jobs:
       - checkout
 
       - run:
-          name: Build and test
+          name: test
           command: |
             mvn clean test
 
@@ -19,8 +19,18 @@ jobs:
       - store_artifacts:
           path: target/cucumber-html-reports/
           destination: cucumber-reports/
+  test:
+  docker:
+    - image: circleci/openjdk:8-jdk
+  steps:
+    - checkout
+    - run: mvn test
 
 workflows:
-  build_and_test:
+  version: 2
+  build-and-test:
     jobs:
       - build
+      - test:
+          requires:
+            - build
