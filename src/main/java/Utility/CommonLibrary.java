@@ -25,14 +25,14 @@ public class CommonLibrary {
     public CommonLibrary(){
         FileInputStream fis;
         try {
-            fis = new FileInputStream("/root/project/src/test/Config/Env.properties");
+            String workingDir = System.getProperty("user.dir");
+            String filePath = workingDir + "/src/test/Config/Env.properties";
+            fis = new FileInputStream(filePath);
             properties=new Properties();
             properties.load(fis);
         } catch (FileNotFoundException e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
-        }catch (IOException e) {
-            // TODO Auto-generated catch block
+        } catch (IOException e) {
             e.printStackTrace();
         }
     }
