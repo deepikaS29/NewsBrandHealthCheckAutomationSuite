@@ -25,7 +25,7 @@ public class CommonLibrary {
     public CommonLibrary(){
         FileInputStream fis;
         try {
-            fis = new FileInputStream(System.getProperty("user.dir")+"\\src\\test\\Config\\Env.properties");
+            fis = new FileInputStream("/root/project/src/test/Config/Env.properties");
             properties=new Properties();
             properties.load(fis);
         } catch (FileNotFoundException e) {
