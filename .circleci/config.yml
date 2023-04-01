@@ -14,7 +14,7 @@ jobs:
           command: |
             mvn test
             sudo mkdir -p $CIRCLE_TEST_REPORTS/junit/
-            sudo cp target/surefire-reports/*.xml $CIRCLE_TEST_REPORTS/junit/
+            sudo cp -r target/surefire-reports/*.xml $CIRCLE_TEST_REPORTS/junit/
           path: /home/circleci/project
       - store_test_results:
           path: /home/circleci/project/target/surefire-reports
