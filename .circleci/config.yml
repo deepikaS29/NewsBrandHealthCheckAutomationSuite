@@ -2,20 +2,16 @@ version: 2.1
 
 jobs:
   build:
-    docker:
+  docker:
       - image: circleci/openjdk:11-jdk
 
-    steps:
+  steps:
       - checkout
 
       - run:
           name: build
           command: |
             mvn clean install
-
-      - run:
-          name: Run Maven tests with -x flag
-          command: mvn test -B -x
 
   test:
     docker:
@@ -36,8 +32,6 @@ jobs:
           name: create report
           command: |
             mvn verify
-
-      - run: mvn clean test -Dtest=TestRunner -Dcucumber.options="--plugin io.cucumber.junit.CucumberOptions,--plugin json:target/cucumber-report/cucumber.json" -X
 
       - store_artifacts:
           path: target/cucumber-html-reports/
