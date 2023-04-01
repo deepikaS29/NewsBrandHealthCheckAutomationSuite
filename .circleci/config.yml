@@ -7,14 +7,15 @@ jobs:
 
     steps:
       - checkout
-      - run:
-          name: Install dependencies
-          command: |
-            apt-get update
-            apt-get install -y maven
 
       - run:
-          name: Build project
+          name: install maven
+          command: |
+            sudo apt-get update
+            sudo apt-get install -y maven
+
+      - run:
+          name: build
           command: |
             mvn clean install
 
@@ -24,24 +25,25 @@ jobs:
 
     steps:
       - checkout
-      - run:
-          name: Install dependencies
-          command: |
-            apt-get update
-            apt-get install -y maven
 
       - run:
-          name: Run unit tests
+          name: install maven
+          command: |
+            sudo apt-get update
+            sudo apt-get install -y maven
+
+      - run:
+          name: test
           command: |
             mvn clean test
 
-      - run:
-          name: Generate test report
-          command: |
-            mvn verify
-
       - store_test_results:
           path: target/surefire-reports
+
+      - run:
+          name: create report
+          command: |
+            mvn verify
 
       - store_artifacts:
           path: target/cucumber-html-reports/
