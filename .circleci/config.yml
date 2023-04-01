@@ -20,6 +20,10 @@ jobs:
           path: target/cucumber-html-reports/
           destination: cucumber-reports/
           when: always
+      - run:
+          name: list files in cucumber-reports directory
+          command: |
+            ls -la target/cucumber-html-reports/
   test:
     docker:
       - image: circleci/openjdk:11-jdk
