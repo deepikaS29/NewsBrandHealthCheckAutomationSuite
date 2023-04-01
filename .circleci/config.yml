@@ -46,7 +46,7 @@ jobs:
             mvn verify
 
       - store_artifacts:
-          path: target/cucumber-html-reports/
+          path: target/cucumber-html-report.html/
           destination: cucumber-reports/
 
 workflows:
