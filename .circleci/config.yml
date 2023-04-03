@@ -17,7 +17,7 @@ jobs:
             sudo mkdir -p $CIRCLE_TEST_REPORTS/junit/
             pwd
             ls -l target/surefire-reports/
-            sudo cp -r ${project.build.directory}/cucumber-jvm-report/*.xml $CIRCLE_TEST_REPORTS/junit/
+            sudo cp -r sudo cp -r "${project.build.directory}/cucumber-jvm-report/"*.xml $CIRCLE_TEST_REPORTS/junit/
           path: /home/circleci/project
       - store_test_results:
           path: /home/circleci/project/target/surefire-reports
