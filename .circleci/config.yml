@@ -13,7 +13,7 @@ jobs:
           name: Run tests and copy results
           command: |
               echo "project.build.directory=$${project.build.directory}"
-              mvn test -Dtest=Runner -Dcucumber.features="${project.basedir}/src/test/feature/"
+              mvn test -Dtest=Runner -Dcucumber.features="$(pwd)/src/test/feature/"
               sudo mkdir -p $CIRCLE_TEST_REPORTS/
               sudo cp -r "${project.build.directory}/cucumber-html-report/"*.html $CIRCLE_ARTIFACTS/
               path: /home/circleci/project
