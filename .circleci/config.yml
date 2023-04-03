@@ -14,13 +14,9 @@ jobs:
           command: |
             echo "project.build.directory=$${project.build.directory}"
             mvn test
-            sudo mkdir -p $CIRCLE_TEST_REPORTS/junit/
-            pwd
-            ls -l target/surefire-reports/
-            sudo cp -r "${project.build.directory}/cucumber.xml" $CIRCLE_TEST_REPORTS/junit/
+            sudo mkdir -p $CIRCLE_TEST_REPORTS/
+            sudo cp -r "${project.build.directory}/cucumber-html-report.html" $CIRCLE_TEST_REPORTS/
           path: /home/circleci/project
-      - store_test_results:
-          path: /home/circleci/project/target/surefire-reports
       - store_artifacts:
           path: /home/circleci/project/target/cucumber-html-report.html
 
