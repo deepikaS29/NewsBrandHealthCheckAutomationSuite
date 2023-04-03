@@ -12,13 +12,12 @@ jobs:
       - run:
           name: Run tests and copy results
           command: |
+            echo "project.build.directory=$${project.build.directory}"
             mvn test
-            echo "project.build.directory=${project.build.directory}"
-            sudo mkdir -p target/surefire-reports/
             sudo mkdir -p $CIRCLE_TEST_REPORTS/junit/
             pwd
             ls -l target/surefire-reports/
-            sudo cp -r sudo cp -r "${project.build.directory}/cucumber-jvm-report/"*.xml $CIRCLE_TEST_REPORTS/junit/
+            sudo cp -r "${project.build.directory}/cucumber-jvm-report/"*.xml $CIRCLE_TEST_REPORTS/junit/
           path: /home/circleci/project
       - store_test_results:
           path: /home/circleci/project/target/surefire-reports
