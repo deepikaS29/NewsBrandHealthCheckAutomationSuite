@@ -23,7 +23,7 @@ jobs:
             ls -l ${project.build.directory}/cucumber-html-report/
             cp -r ${project.build.directory}/cucumber-html-report/* $CIRCLE_ARTIFACTS/
             echo "Done copying cucumber report files."
-          path: /home/circleci/project/target
+          path: /home/circleci/project/target/cucumber-html-report/
 
 workflows:
   version: 2
