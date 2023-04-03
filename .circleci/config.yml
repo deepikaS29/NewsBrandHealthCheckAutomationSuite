@@ -15,7 +15,7 @@ jobs:
             echo "project.build.directory=$${project.build.directory}"
             mvn test
             sudo mkdir -p $CIRCLE_TEST_REPORTS/
-            sudo cp -r target/cucumber-html-report/*.html $CIRCLE_ARTIFACTS
+            sudo cp -r "${project.build.directory}/cucumber-html-report/"*.html $CIRCLE_ARTIFACTS/
           path: /home/circleci/project
       - store_artifacts:
           path: /home/circleci/project/target/cucumber-html-report.html
