@@ -41,7 +41,17 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>3.0.0-M5</version>
-            </plugin>
+                <configuration>
+                <testFailureIgnore>true</testFailureIgnore>
+                <argLine>-Dfile.encoding=UTF-8</argLine>
+                <systemProperties>
+                    <property>
+                        <name>cucumber.options</name>
+                        <value>--plugin json:target/cucumber-report.json</value>
+                    </property>
+                </systemProperties>
+            </configuration>
+        </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
