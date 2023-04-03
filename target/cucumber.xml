@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="3" time="72.689">
-    <testcase classname="Verify Home Page Features" name="Verify Menu Options" time="11.146">
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="3" time="76.873">
+    <testcase classname="Verify Home Page Features" name="Verify Menu Options" time="12.329">
         <system-out><![CDATA[When User click the i accept button.........................................passed
 And Click on Menu option....................................................passed
 Then Verify all links like News,Politics,Sports,Lifestyle etc...............passed
 And Take screenshot of the page.............................................passed
 ]]></system-out>
     </testcase>
-    <testcase classname="Verify Home Page Features" name="Verify Menu tabs" time="45.983">
+    <testcase classname="Verify Home Page Features" name="Verify Menu tabs" time="48.82">
         <system-out><![CDATA[When User click the i accept button.........................................passed
 Then verify and click all tabs like News,Politics,Sports,Lifestyle etc......passed
 And Take screenshot of the page.............................................passed
 ]]></system-out>
     </testcase>
-    <testcase classname="Verify Home Page Features" name="Verify the search details" time="15.342">
+    <testcase classname="Verify Home Page Features" name="Verify the search details" time="15.533">
         <system-out><![CDATA[When User click the i accept button.........................................passed
 And click on searchIcon and enter keyword "life"............................passed
 And click Go button.........................................................passed
