@@ -18,7 +18,12 @@ jobs:
             sudo cp -r "${project.build.directory}/cucumber-html-report/"*.html $CIRCLE_ARTIFACTS/
           path: /home/circleci/project
       - store_artifacts:
-          path: /home/circleci/project/target/cucumber-html-report.html
+          command: |
+            echo "Copying cucumber report files..."
+            ls -l ${project.build.directory}/cucumber-html-report/
+            cp -r ${project.build.directory}/cucumber-html-report/* $CIRCLE_ARTIFACTS/
+            echo "Done copying cucumber report files."
+          path: /home/circleci/project/target
 
 workflows:
   version: 2
