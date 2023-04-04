@@ -14,7 +14,6 @@
         - run:
             name: Download and copy ChromeDriver executable
             command: |
-            #!/bin/bash -eo pipefail
              wget https://chromedriver.storage.googleapis.com/LATEST_RELEASE -O LATEST_RELEASE
              wget https://chromedriver.storage.googleapis.com/$(cat LATEST_RELEASE)/chromedriver_linux64.zip
              unzip chromedriver_linux64.zip
