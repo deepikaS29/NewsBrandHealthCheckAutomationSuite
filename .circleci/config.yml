@@ -1,40 +1,41 @@
-  version: 2.1
+version: 2.1
 
-  jobs:
-    test:
-      docker:
-        - image: circleci/openjdk:11-jdk
-          environment:
-            JAVA_HOME: /usr/lib/jvm/java-11-openjdk-amd64/
-      working_directory: ~/project
-      steps:
-        - checkout
-        - run: sudo apt-get update
-        - run: sudo apt-get install -y maven
-        - run:
-            name: Download and copy ChromeDriver executable
-            command: |
-             wget https://chromedriver.storage.googleapis.com/LATEST_RELEASE -O LATEST_RELEASE
-             wget https://chromedriver.storage.googleapis.com/$(cat LATEST_RELEASE)/chromedriver_linux64.zip
-             unzip chromedriver_linux64.zip
-             cp -f chromedriver /home/circleci/project/chromedriver_new
-        - run:
-            name: Run tests and copy results
-            command: |
-              export PROJECT_BUILD_DIRECTORY=$project.build.directory
-              echo "project.build.directory=${PROJECT_BUILD_DIRECTORY}"
-              mvn test -Dtest=Runner -Dcucumber.features="$(pwd)/src/test/feature/"
-              sudo mkdir -p $CIRCLE_TEST_REPORTS/
-              sudo cp -r "$CIRCLE_WORKING_DIRECTORY/target/cucumber-html-report/"*.html $CIRCLE_ARTIFACTS/
-            path: /home/circleci/project
-        - store_artifacts:
-            path: $CIRCLE_WORKING_DIRECTORY/target/cucumber-html-report/
-            destination: cucumber-html-report
-        - store_artifacts:
-            path: $CIRCLE_WORKING_DIRECTORY/target/surefire-reports/
+jobs:
+  test:
+    docker:
+      - image: circleci/openjdk:11-jdk
+        environment:
+          JAVA_HOME: /usr/lib/jvm/java-11-openjdk-amd64/
+      - image: selenium/standalone-chrome:latest
+    working_directory: ~/project
+    steps:
+      - checkout
+      - run: sudo apt-get update
+      - run: sudo apt-get install -y maven
+      - run:
+          name: Download and copy ChromeDriver executable
+          command: |
+            wget https://chromedriver.storage.googleapis.com/LATEST_RELEASE -O LATEST_RELEASE
+            wget https://chromedriver.storage.googleapis.com/$(cat LATEST_RELEASE)/chromedriver_linux64.zip
+            unzip chromedriver_linux64.zip
+            cp -f chromedriver /home/circleci/project/chromedriver_new
+      - run:
+          name: Run tests and copy results
+          command: |
+            export PROJECT_BUILD_DIRECTORY=$project.build.directory
+            echo "project.build.directory=${PROJECT_BUILD_DIRECTORY}"
+            mvn test -Dtest=Runner -Dcucumber.features="$(pwd)/src/test/feature/"
+            sudo mkdir -p $CIRCLE_TEST_REPORTS/
+            sudo cp -r "$CIRCLE_WORKING_DIRECTORY/target/cucumber-html-report/"*.html $CIRCLE_ARTIFACTS/
+          path: /home/circleci/project
+      - store_artifacts:
+          path: $CIRCLE_WORKING_DIRECTORY/target/cucumber-html-report/
+          destination: cucumber-html-report
+      - store_artifacts:
+          path: $CIRCLE_WORKING_DIRECTORY/target/surefire-reports/
 
-  workflows:
-    version: 2
-    test:
-      jobs:
-        - test
+workflows:
+  version: 2
+  test:
+    jobs:
+      - test
