@@ -4,6 +4,8 @@ jobs:
   test:
     docker:
       - image: circleci/openjdk:11-jdk
+        environment:
+          JAVA_HOME: /usr/lib/jvm/java-11-openjdk-amd64/
     working_directory: ~/project
     steps:
       - checkout
