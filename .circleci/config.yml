@@ -17,12 +17,13 @@ jobs:
             echo "project.build.directory=${project.build.directory}"
             mvn test -Dtest=Runner -Dcucumber.features="$(pwd)/src/test/feature/"
             sudo mkdir -p $CIRCLE_TEST_REPORTS/
-            sudo cp -r "${CIRCLE_WORKING_DIRECTORY}/target/cucumber-html-report/"*.html $CIRCLE_ARTIFACTS/
+            sudo cp -r ${project.build.directory}/cucumber-html-report/*.html $CIRCLE_ARTIFACTS/
       - store_artifacts:
           path: /home/circleci/project/target/cucumber-html-report/
           destination: cucumber-html-report
-  workflows:
-    version: 2
-    test:
-      jobs:
-        - test
+
+workflows:
+  version: 2
+  test:
+    jobs:
+      - testt
