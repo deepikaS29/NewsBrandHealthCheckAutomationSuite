@@ -1,33 +1,49 @@
-version: 2.1
+  version: 2.1
 
-jobs:
-  test:
+  jobs:
+    test:
     docker:
       - image: circleci/openjdk:11-jdk
         environment:
           JAVA_HOME: /usr/lib/jvm/java-11-openjdk-amd64/
-    working_directory: ~/project
-    steps:
-      - checkout
-      - run: sudo apt-get update
-      - run: sudo apt-get install -y maven
-      - run:
-          name: Run tests and copy results
-          command: |
-            export PROJECT_BUILD_DIRECTORY=$project.build.directory
-            echo "project.build.directory=${PROJECT_BUILD_DIRECTORY}"
-            mvn test -Dtest=Runner -Dcucumber.features="$(pwd)/src/test/feature/"
-            sudo mkdir -p $CIRCLE_TEST_REPORTS/
-            sudo cp -r "$CIRCLE_WORKING_DIRECTORY/target/cucumber-html-report/"*.html $CIRCLE_ARTIFACTS/
-          path: /home/circleci/project
-      - store_artifacts:
-          path: $CIRCLE_WORKING_DIRECTORY/target/cucumber-html-report/
-          destination: cucumber-html-report
-      - store_artifacts:
-          path: $CIRCLE_WORKING_DIRECTORY/target/surefire-reports/
+      - image: circleci/python:3.8-buster
+        environment:
+          CHROMEDRIVER_VERSION: "latest"
+          CHROME_BIN: "/usr/bin/google-chrome-stable"
+      working_directory: ~/project
+      steps:
+        - checkout
+        - run: sudo apt-get update
+        - run: sudo apt-get install -y maven
+        - run:
+            name: Install Chrome and ChromeDriver
+            command: |
+              sudo apt-get install -y wget gnupg unzip
+              wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
+              echo "deb http://dl.google.com/linux/chrome/deb/ stable main" | sudo tee -a /etc/apt/sources.list.d/google.list
+              sudo apt-get update
+              sudo apt-get install -y google-chrome-stable
+              wget -q -O /tmp/chromedriver_linux64.zip https://chromedriver.storage.googleapis.com/$(curl -s https://chromedriver.storage.googleapis.com/LATEST_RELEASE)/chromedriver_linux64.zip
+              sudo unzip /tmp/chromedriver_linux64.zip chromedriver -d /usr/local/bin/
+              sudo chmod +x /usr/local/bin/chromedriver
+            path: /home/circleci/project
+        - run:
+            name: Run tests and copy results
+            command: |
+              export PROJECT_BUILD_DIRECTORY=$project.build.directory
+              echo "project.build.directory=${PROJECT_BUILD_DIRECTORY}"
+              mvn test -Dtest=Runner -Dcucumber.features="$(pwd)/src/test/feature/"
+              sudo mkdir -p $CIRCLE_TEST_REPORTS/
+              sudo cp -r "$CIRCLE_WORKING_DIRECTORY/target/cucumber-html-report/"*.html $CIRCLE_ARTIFACTS/
+            path: /home/circleci/project
+        - store_artifacts:
+            path: $CIRCLE_WORKING_DIRECTORY/target/cucumber-html-report/
+            destination: cucumber-html-report
+        - store_artifacts:
+            path: $CIRCLE_WORKING_DIRECTORY/target/surefire-reports/
 
-workflows:
-  version: 2
-  test:
-    jobs:
-      - test
+  workflows:
+    version: 2
+    test:
+      jobs:
+        - test
