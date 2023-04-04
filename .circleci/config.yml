@@ -14,18 +14,14 @@ jobs:
       - run:
           name: Run tests and copy results
           command: |
-              echo "project.build.directory=$${project.build.directory}"
-              mvn test -Dtest=Runner -Dcucumber.features="$(pwd)/src/test/feature/"
-              sudo mkdir -p $CIRCLE_TEST_REPORTS/
-              sudo cp -r "${project.build.directory}/cucumber-html-report/"*.html $CIRCLE_ARTIFACTS/
-              path: /home/circleci/project
+            echo "project.build.directory=${project.build.directory}"
+            mvn test -Dtest=Runner -Dcucumber.features="$(pwd)/src/test/feature/"
+            sudo mkdir -p $CIRCLE_TEST_REPORTS/
+            sudo cp -r ${project.build.directory}/cucumber-html-report/*.html $CIRCLE_ARTIFACTS/
+          path: /home/circleci/project
       - store_artifacts:
-          command: |
-            echo "Copying cucumber report files..."
-            ls -l ${project.build.directory}/cucumber-html-report/
-            cp -r ${project.build.directory}/cucumber-html-report/* $CIRCLE_ARTIFACTS/
-            echo "Done copying cucumber report files."
           path: /home/circleci/project/target/cucumber-html-report/
+          destination: cucumber-html-report
 
 workflows:
   version: 2
