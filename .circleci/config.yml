@@ -20,11 +20,10 @@ jobs:
             sudo cp -r "$CIRCLE_WORKING_DIRECTORY/target/cucumber-html-report/"*.html $CIRCLE_ARTIFACTS/
           path: /home/circleci/project
       - store_artifacts:
-        path: $CIRCLE_WORKING_DIRECTORY/target/cucumber-html-report/
-        destination: cucumber-html-report
+          path: $CIRCLE_WORKING_DIRECTORY/target/cucumber-html-report/
+          destination: cucumber-html-report
       - store_artifacts:
-              path: $CIRCLE_WORKING_DIRECTORY/target/surefire-reports/
-              destination: surefire-reports
+          path: $CIRCLE_WORKING_DIRECTORY/target/surefire-reports/
 
 workflows:
   version: 2
