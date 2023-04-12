@@ -39,17 +39,21 @@ public class CommonLibrary {
     public void openBrowser() {
         if(properties.getProperty("browser").equalsIgnoreCase("chrome")){
             //System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"\\Resources\\Drivers\\chromedriver.exe");
+            WebDriverManager.chromedriver().setup();
+            ChromeOptions options = new ChromeOptions();
+            options.addArguments("--headless");
+            options.addArguments("--disable-gpu");
+            options.addArguments("--no-sandbox");
+            options.addArguments("--disable-dev-shm-usage");
+            options.addArguments("--remote-debugging-port=9222");
+
             if(properties.getProperty("extension").equalsIgnoreCase("Yes")){
-                WebDriverManager.chromedriver().setup();
-                ChromeOptions options=new ChromeOptions();
                 options.addExtensions(new File(("C:\\AdBlock best ad blocker.crx")));
-                DesiredCapabilities capabilities=DesiredCapabilities.chrome();
-                capabilities.setCapability(ChromeOptions.CAPABILITY,options);
-                driver=new ChromeDriver(capabilities);
-            }else{
-                WebDriverManager.chromedriver().setup();
-                driver=new ChromeDriver();
             }
+
+            DesiredCapabilities capabilities=DesiredCapabilities.chrome();
+            capabilities.setCapability(ChromeOptions.CAPABILITY,options);
+            driver=new ChromeDriver(capabilities);
 
         }else if(properties.getProperty("browser").equalsIgnoreCase("firefox")){
             //System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"\\Resources\\Drivers\\geckodriver.exe");
@@ -64,7 +68,6 @@ public class CommonLibrary {
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.get(properties.getProperty("applcation_URL"));
     }
-
     public void  closeBrowser() {
         driver.quit();
     }
