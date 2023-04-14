@@ -21,7 +21,7 @@ jobs:
           command: |
             sudo apt-get install -y wget
             wget https://repo1.maven.org/maven2/io/github/bonigarcia/webdrivermanager/4.5.3/webdrivermanager-4.5.3-standalone.jar
-            java -jar webdrivermanager-4.5.3-standalone.jar chromedriver --force-download --export
+            java -jar webdrivermanager-4.4.5-standalone.jar chromedriver --force-download --export
       - run:
           name: Run tests and copy results
           command: |
