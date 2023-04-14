@@ -20,7 +20,7 @@ jobs:
           name: Setup WebDriver Manager
           command: |
             sudo apt-get install -y wget
-            wget https://github.com/bonigarcia/webdrivermanager/releases/download/4.6.1/webdrivermanager-4.6.1.jar
+            wget https://repo1.maven.org/maven2/io/github/bonigarcia/webdrivermanager/4.6.1/webdrivermanager-4.6.1.jar
             java -jar webdrivermanager-4.6.1.jar chromedriver --force-download --export
       - run:
           name: Run tests and copy results
