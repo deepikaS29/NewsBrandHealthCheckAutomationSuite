@@ -3,19 +3,10 @@ version: 2.1
 jobs:
   build:
     docker:
-      - image: circleci/openjdk:11-jdk
+      - image: maven:3.6-jdk-11
     steps:
       - checkout
-      - run:
-          name: Install ChromeDriver
-          command: |
-            LATEST=`curl -sSL https://chromedriver.storage.googleapis.com/LATEST_RELEASE`
-            curl -sSL https://chromedriver.storage.googleapis.com/$LATEST/chromedriver_linux64.zip -o chromedriver.zip
-            unzip chromedriver.zip -d /home/circleci/bin
-            rm chromedriver.zip
-      - run:
-          name: Build project
-          command: ./gradlew build
+      - run: mvn clean install
 
   test:
     docker:
@@ -31,11 +22,11 @@ jobs:
             rm chromedriver.zip
       - run:
           name: Run tests
-          command: ./gradlew test
+          command: mvn test
       - store_test_results:
-          path: build/test-results
+          path: target/surefire-reports
       - store_artifacts:
-          path: build/reports/tests
+          path: target/site/serenity
 
 workflows:
   build-and-test:
