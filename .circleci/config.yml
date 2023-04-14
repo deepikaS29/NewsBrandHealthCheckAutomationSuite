@@ -1,5 +1,22 @@
 version: 2.1
-jojobs:
+
+jobs:
+  build:
+    docker:
+      - image: circleci/openjdk:11-jdk
+    steps:
+      - checkout
+      - run:
+          name: Install ChromeDriver
+          command: |
+            LATEST=`curl -sSL https://chromedriver.storage.googleapis.com/LATEST_RELEASE`
+            curl -sSL https://chromedriver.storage.googleapis.com/$LATEST/chromedriver_linux64.zip -o chromedriver.zip
+            unzip chromedriver.zip -d /home/circleci/bin
+            rm chromedriver.zip
+      - run:
+          name: Build project
+          command: ./gradlew build
+
   test:
     docker:
       - image: circleci/openjdk:11-jdk
@@ -13,9 +30,17 @@ jojobs:
             unzip chromedriver.zip -d /home/circleci/bin
             rm chromedriver.zip
       - run:
-          name: Build project and run tests
+          name: Run tests
           command: ./gradlew test
       - store_test_results:
           path: build/test-results
       - store_artifacts:
           path: build/reports/tests
+
+workflows:
+  build-and-test:
+    jobs:
+      - build
+      - test:
+          requires:
+            - build
