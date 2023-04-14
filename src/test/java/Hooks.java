@@ -12,11 +12,6 @@ public class Hooks extends CommonLibrary {
         openBrowser();
     }
 
-   // @After
-   // public void afterMethod() {
-        //closeBrowser();
-   // }
-
     @After
     public void tearDown(Scenario scenario) {
         if(scenario.isFailed()) {

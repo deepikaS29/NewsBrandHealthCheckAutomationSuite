@@ -17,12 +17,6 @@ import java.util.Map;
 public class HomePageMenuList extends CommonLibrary {
 
     HomePage homePage=new HomePage();
-//   private Scenario scenario;
-//    @Before
-//    public void setUpScenario(Scenario scenario){
-//     this.scenario = scenario;
-//    }
-//
 
 
     @When("Click on Menu option")

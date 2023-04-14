@@ -1,42 +1,19 @@
 version: 2.1
 
 jobs:
-  test:
+  build:
     docker:
-      - image: cimg/base:2021.04
-    working_directory: ~/project
+      - image: circleci/openjdk:11-jdk
+    working_directory: ~/repo
     steps:
       - checkout
-      - run:
-          name: Install Dependencies
-          command: |
-            sudo apt-get update
-            sudo apt-get install -y maven openjdk-11-jdk
-            curl -sS -o - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
-            echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" | sudo tee /etc/apt/sources.list.d/google-chrome.list
-            sudo apt-get -y update
-            sudo apt-get -y install google-chrome-stable
-      - run:
-          name: Compile and run WebDriver Manager setup
-          command: |
-            mvn compile
-            mvn exec:java -Dexec.mainClass="SetupWebDriverManager"
-      - run:
-          name: Run tests and copy results
-          command: |
-            export PROJECT_BUILD_DIRECTORY=$project.build.directory
-            echo "project.build.directory=${PROJECT_BUILD_DIRECTORY}"
-            mvn test -Dtest=Runner -Dcucumber.features="$(pwd)/src/test/feature/" -Dwebdriver.chrome.driver=$(pwd)/chromedriver
-            sudo mkdir -p $CIRCLE_TEST_REPORTS/
-            sudo cp -r "$CIRCLE_WORKING_DIRECTORY/target/cucumber-html-report/"*.html $CIRCLE_ARTIFACTS/
-            sudo cp -r "$CIRCLE_WORKING_DIRECTORY/target/surefire-reports/" $CIRCLE_TEST_REPORTS/
-      - store_artifacts:
-          path: $CIRCLE_WORKING_DIRECTORY/target/cucumber-html-report/
-          destination: cucumber-html-report
-      - store_artifacts:
-          path: $CIRCLE_WORKING_DIRECTORY/target/surefire-reports/
+      - run: sudo apt-get update && sudo apt-get install -y maven
+      - run: mvn test -Dtest=RunCucumberTest -Dcucumber.options="--plugin junit:$CIRCLE_WORKING_DIRECTORY/target/cucumber-reports/Cucumber.xml"
+      - store_test_results:
+          path: $CIRCLE_WORKING_DIRECTORY/target/cucumber-html-reports.html
 
 workflows:
+  version: 2
   test:
     jobs:
-      - test
+      - build
