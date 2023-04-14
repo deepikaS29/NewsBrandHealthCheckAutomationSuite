@@ -69,6 +69,7 @@ public class CommonLibrary {
         driver.get(properties.getProperty("applcation_URL"));
     }
     public void  closeBrowser() {
+
         driver.quit();
     }
 }

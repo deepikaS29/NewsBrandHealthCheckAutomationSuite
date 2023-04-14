@@ -3,38 +3,27 @@ version: 2.1
 jobs:
   test:
     docker:
-      - image: circleci/openjdk:11-jdk
-        environment:
-          JAVA_HOME: /usr/lib/jvm/java-11-openjdk-amd64/
+      - image: cimg/base:2021.04
     working_directory: ~/project
     steps:
       - checkout
-      - run: sudo apt-get update
       - run:
-          name: Install Google Chrome and ChromeDriver
+          name: Install Dependencies
           command: |
-            export DISPLAY=:99
-            export DBUS_SESSION_BUS_ADDRESS=/dev/null
-            curl -sS -o - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
-            sudo sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
-            sudo apt-get -y update
-            sudo apt-get -y install google-chrome-stable
-            sudo apt-get install -y xvfb
-            Xvfb :99 -screen 0 1024x768x24 > /dev/null 2>&1 &
-            sleep 3
-            google-chrome-stable --headless --disable-gpu --no-sandbox
-            # Install ChromeDriver
-            wget https://chromedriver.storage.googleapis.com/LATEST_RELEASE -O LATEST_RELEASE
-            wget https://chromedriver.storage.googleapis.com/$(cat LATEST_RELEASE)/chromedriver_linux64.zip
-            unzip chromedriver_linux64.zip
-            cp -f chromedriver /home/circleci/project/chromedriver_new
-      - run: sudo apt-get install -y maven
+            sudo apt-get update
+            sudo apt-get install -y maven openjdk-11-jdk google-chrome-stable
+      - run:
+          name: Setup WebDriver Manager
+          command: |
+            sudo apt-get install -y wget
+            wget https://github.com/bonigarcia/webdrivermanager/releases/download/4.4.0/webdrivermanager-4.4.0.jar
+            java -jar webdrivermanager-4.4.0.jar chromedriver --force-download --export
       - run:
           name: Run tests and copy results
           command: |
             export PROJECT_BUILD_DIRECTORY=$project.build.directory
             echo "project.build.directory=${PROJECT_BUILD_DIRECTORY}"
-            mvn test -Dtest=Runner -Dcucumber.features="$(pwd)/src/test/feature/" -Dwebdriver.chrome.driver=/home/circleci/project/chromedriver_new
+            mvn test -Dtest=Runner -Dcucumber.features="$(pwd)/src/test/feature/" -Dwebdriver.chrome.driver=$(pwd)/chromedriver
             sudo mkdir -p $CIRCLE_TEST_REPORTS/
             sudo cp -r "$CIRCLE_WORKING_DIRECTORY/target/cucumber-html-report/"*.html $CIRCLE_ARTIFACTS/
             sudo cp -r "$CIRCLE_WORKING_DIRECTORY/target/surefire-reports/" $CIRCLE_TEST_REPORTS/
