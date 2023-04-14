@@ -42,12 +42,12 @@ public class CommonLibrary {
             WebDriverManager.chromedriver().setup();
             ChromeOptions options = new ChromeOptions();
             //options.addArguments("--headless");
-            options.addArguments("--disable-gpu");
-            options.addArguments("--no-sandbox");
-            options.addArguments("--disable-dev-shm-usage");
-            options.addArguments("--remote-debugging-port=9222");
+            //options.addArguments("--disable-gpu");
+            //options.addArguments("--no-sandbox");
+            //options.addArguments("--disable-dev-shm-usage");
+            //options.addArguments("--remote-debugging-port=9222");
 
-            if(properties.getProperty("extension").equalsIgnoreCase("Yes")){
+           if(properties.getProperty("extension").equalsIgnoreCase("Yes")){
                 options.addExtensions(new File(("C:\\AdBlock best ad blocker.crx")));
             }
 

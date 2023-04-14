@@ -1,37 +1,37 @@
-version: 2.1
+  Copy code
+  version: 2.1
 
-jobs:
-  build:
-    docker:
-      - image: maven:3.6-jdk-11
-    steps:
-      - checkout
-      - run: mvn clean install
+  orbs:
+    browser-tools: circleci/browser-tools@1.1.0
 
-  test:
-    docker:
-      - image: circleci/openjdk:11-jdk
-    steps:
-      - checkout
-      - run:
-          name: Install ChromeDriver
-          command: |
-            LATEST=`curl -sSL https://chromedriver.storage.googleapis.com/LATEST_RELEASE`
-            curl -sSL https://chromedriver.storage.googleapis.com/$LATEST/chromedriver_linux64.zip -o chromedriver.zip
-            unzip chromedriver.zip -d /home/circleci/bin
-            rm chromedriver.zip
-      - run:
-          name: Run tests
-          command: mvn test
-      - store_test_results:
-          path: target/surefire-reports
-      - store_artifacts:
-          path: target/site/serenity
+  jobs:
+    build:
+      docker:
+        - image: circleci/openjdk:8-jdk
+      steps:
+        - checkout
+        - browser-tools/install-browser-tools:
+            chrome-version: "latest"
+        - run:
+            name: Install ChromeDriver
+            command: |
+              sudo apt-get install -y unzip
+              CHROME_DRIVER_VERSION=$(curl -s https://chromedriver.storage.googleapis.com/LATEST_RELEASE)
+              curl -s -O https://chromedriver.storage.googleapis.com/$CHROME_DRIVER_VERSION/chromedriver_linux64.zip
+              unzip chromedriver_linux64.zip -d /tmp
+              sudo mv /tmp/chromedriver /usr/local/bin/
+              sudo chmod +x /usr/local/bin/chromedriver
+        - run:
+            name: Update System Properties
+            command: |
+              sudo echo "webdriver.chrome.driver=/usr/local/bin/chromedriver" > system.properties
+        - run:
+            name: Build and Test
+            command: |
+              mvn clean test -Dwebdriver.chrome.driver=/usr/local/bin/chromedriver
 
-workflows:
-  build-and-test:
-    jobs:
-      - build
-      - test:
-          requires:
-            - build
+  workflows:
+    version: 2
+    build-deploy:
+      jobs:
+        - build
