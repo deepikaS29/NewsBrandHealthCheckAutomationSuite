@@ -1,19 +1,21 @@
 version: 2.1
-
-jobs:
-  build:
+jojobs:
+  test:
     docker:
       - image: circleci/openjdk:11-jdk
-    working_directory: ~/repo
     steps:
       - checkout
-      - run: sudo apt-get update && sudo apt-get install -y maven
-      - run: mvn test -Dtest=RunCucumberTest -Dcucumber.options="--plugin junit:$CIRCLE_WORKING_DIRECTORY/target/cucumber-reports/Cucumber.xml"
+      - run:
+          name: Install ChromeDriver
+          command: |
+            LATEST=`curl -sSL https://chromedriver.storage.googleapis.com/LATEST_RELEASE`
+            curl -sSL https://chromedriver.storage.googleapis.com/$LATEST/chromedriver_linux64.zip -o chromedriver.zip
+            unzip chromedriver.zip -d /home/circleci/bin
+            rm chromedriver.zip
+      - run:
+          name: Build project and run tests
+          command: ./gradlew test
       - store_test_results:
-          path: $CIRCLE_WORKING_DIRECTORY/target/cucumber-html-reports.html
-
-workflows:
-  version: 2
-  test:
-    jobs:
-      - build
+          path: build/test-results
+      - store_artifacts:
+          path: build/reports/tests
