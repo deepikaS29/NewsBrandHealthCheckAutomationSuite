@@ -1,15 +1,9 @@
-  Copy code
-  version: 2.1
+version: 2.1
 
-  orbs:
+orbs:
     browser-tools: circleci/browser-tools@1.1.0
 
-  version: 2.1
-
-  orbs:
-    browser-tools: circleci/browser-tools@1.1.0
-
-  jobs:
+jobs:
     build:
       docker:
         - image: circleci/openjdk:8-jdk
