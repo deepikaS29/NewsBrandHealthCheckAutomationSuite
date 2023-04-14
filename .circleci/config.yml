@@ -11,7 +11,7 @@ jobs:
       - checkout
       - run: sudo apt-get update
       - run:
-          name: Install Google Chrome
+          name: Install Google Chrome and ChromeDriver
           command: |
             export DISPLAY=:99
             export DBUS_SESSION_BUS_ADDRESS=/dev/null
@@ -23,14 +23,12 @@ jobs:
             Xvfb :99 -screen 0 1024x768x24 > /dev/null 2>&1 &
             sleep 3
             google-chrome-stable --headless --disable-gpu --no-sandbox
-      - run: sudo apt-get install -y maven
-      - run:
-          name: Download and copy ChromeDriver executable
-          command: |
+            # Install ChromeDriver
             wget https://chromedriver.storage.googleapis.com/LATEST_RELEASE -O LATEST_RELEASE
             wget https://chromedriver.storage.googleapis.com/$(cat LATEST_RELEASE)/chromedriver_linux64.zip
             unzip chromedriver_linux64.zip
             cp -f chromedriver /home/circleci/project/chromedriver_new
+      - run: sudo apt-get install -y maven
       - run:
           name: Run tests and copy results
           command: |
