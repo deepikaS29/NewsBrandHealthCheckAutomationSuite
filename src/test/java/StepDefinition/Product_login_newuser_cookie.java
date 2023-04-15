@@ -1,18 +1,13 @@
 package StepDefinition;
 
-import Pages.HomePage;
 import Utility.CommonLibrary;
-import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 import org.openqa.selenium.By;
-import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.ArrayList;
-import java.util.Map;
 
 public class Product_login_newuser_cookie extends CommonLibrary {
     WebDriverWait wait = new WebDriverWait(driver, 60);

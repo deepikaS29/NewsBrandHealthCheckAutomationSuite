@@ -1,15 +1,11 @@
 package StepDefinition;
 
-import Pages.LoginPage;
 import Pages.ScrollersPage;
 import Utility.CommonLibrary;
 import io.cucumber.datatable.DataTable;
-import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
-import io.cucumber.java.en.When;
 import org.junit.Assert;
 import org.openqa.selenium.By;
-import io.cucumber.datatable.DataTable;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
