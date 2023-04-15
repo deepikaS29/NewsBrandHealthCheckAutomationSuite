@@ -49,7 +49,7 @@
                 <systemProperties>
                     <property>
                         <name>cucumber.options</name>
-                        <value>--plugin json:target/cucumber-report.json</value>
+                        <value>--plugin json:${project.build.directory}/cucumber-report.json --plugin html:${project.build.directory}/cucumber-html-report.html</value>
                     </property>
                 </systemProperties>
             </configuration>

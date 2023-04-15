@@ -29,8 +29,8 @@ jobs:
           command: |
             mvn clean test -Dwebdriver.chrome.driver=/usr/local/bin/chromedriver -Dcucumber.options="--add-opens java.base/java.lang=ALL-UNNAMED --add-opens java.base/java.io=ALL-UNNAMED --add-opens java.base/java.util=ALL-UNNAMED --add-opens java.base/java.util.concurrent=ALL-UNNAMED"
       - store_artifacts:
-          path: target/cucumber-html-reports
-          destination: cucumber-html-reports
+          path: target/cucumber-html-report.html
+          destination: cucumber-html-report.html
 workflows:
   version: 2
   test-workflow:
