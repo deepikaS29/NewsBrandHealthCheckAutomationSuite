@@ -32,8 +32,8 @@
                         </goals>
                         <configuration>
                             <projectName>TheCourierHealthCheck</projectName>
-                            <outputDirectory>${project.build.directory}/cucumber-jvm-report</outputDirectory>
-                            <cucumberOutput>${project.build.directory}/cucumber.json</cucumberOutput>
+                            <outputDirectory>${project.build.directory}/cucumber-html-report</outputDirectory>
+                            <cucumberOutput>${project.build.directory}/cucumber-report.json</cucumberOutput>
                             <buildNumber>10.2.1</buildNumber>
                         </configuration>
                     </execution>

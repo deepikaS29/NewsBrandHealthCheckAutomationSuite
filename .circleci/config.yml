@@ -33,8 +33,8 @@ jobs:
           command: |
             ls -la target
       - store_artifacts:
-          path: target/cucumber-html-report.html
-          destination: cucumber-html-report.html
+          path: target/cucumber-html-report
+          destination: cucumber-html-report
 workflows:
   version: 2
   test-workflow:
