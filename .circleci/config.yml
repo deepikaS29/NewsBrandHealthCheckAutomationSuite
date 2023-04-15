@@ -9,6 +9,7 @@ jobs:
       - image: circleci/openjdk:8-jdk
     steps:
       - checkout
+      - run: mvn -Dtest.classpath.scope=compile clean test
       - browser-tools/install-browser-tools:
           chrome-version: "latest"
       - run:
