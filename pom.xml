@@ -32,15 +32,11 @@
                     </goals>
                     <configuration>
                         <projectName>TheCourierHealthCheck</projectName>
-                        <outputDirectory>target/cucumber-html-report</outputDirectory>
-                        <!--<cucumberOutput>target/cucumber-reports/cucumber.json</cucumberOutput>-->
+                        <outputDirectory>target/cucumber-html-report/</outputDirectory>
+                        <cucumberOutput>target/cucumber.json</cucumberOutput>
                         <jsonFiles>
-                            <param>target/cucumber.json</param>
+                            <param>**/*.json</param>
                         </jsonFiles>
-                        <enableFlashCharts>true</enableFlashCharts>
-                        <buildNumber></buildNumber>
-                        <parallelTesting>false</parallelTesting>
-                        <skip>false</skip>
                     </configuration>
                 </execution>
             </executions>
@@ -55,7 +51,7 @@
                         <include>**/*Runner.java</include>
                     </includes>
                     <systemPropertyVariables>
-                        <cucumber.reporting.outputDirectory>target/cucumber-reports</cucumber.reporting.outputDirectory>
+                        <cucumber.reporting.outputDirectory>target/cucumber-html-report/</cucumber.reporting.outputDirectory>
                     </systemPropertyVariables>
                 </configuration>
             </plugin>

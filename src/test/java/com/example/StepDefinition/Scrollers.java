@@ -1,4 +1,4 @@
-package StepDefinition;
+package com.example.StepDefinition;
 
 import Pages.ScrollersPage;
 import Utility.CommonLibrary;

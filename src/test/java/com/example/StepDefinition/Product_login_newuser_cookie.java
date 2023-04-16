@@ -1,4 +1,4 @@
-package StepDefinition;
+package com.example.StepDefinition;
 
 import Utility.CommonLibrary;
 import io.cucumber.java.en.Then;
