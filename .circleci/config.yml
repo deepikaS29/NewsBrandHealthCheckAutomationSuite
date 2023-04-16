@@ -7,6 +7,10 @@ jobs:
   build:
     docker:
       - image: circleci/openjdk:8-jdk
+        command: /bin/sh -c "while sleep 3600; do :; done"
+        # Add this line to mount the project directory
+        volumes:
+          - .:/home/circleci/project
     steps:
       - checkout
       - browser-tools/install-browser-tools:
