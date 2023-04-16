@@ -54,9 +54,9 @@
                     <includes>
                         <include>**/*Runner.java</include>
                     </includes>
-                    <!--<systemPropertyVariables>
-                        <cucumber.options>-plugin json:target/cucumber-reports/cucumber.json</cucumber.options>
-                    </systemPropertyVariables>-->
+                    <systemPropertyVariables>
+                        <cucumber.reporting.outputDirectory>target/cucumber-reports</cucumber.reporting.outputDirectory>
+                    </systemPropertyVariables>
                 </configuration>
             </plugin>
             <plugin>
