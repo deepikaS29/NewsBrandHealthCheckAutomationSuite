@@ -37,7 +37,7 @@ jobs:
           path: ./target/cucumber-html-report/
           destination: cucumber-html-report
       - store_test_results:
-          path: ./target/cucumber-html-report/
+          path: ./target/surefire-reports/
 
 workflows:
   version: 2
