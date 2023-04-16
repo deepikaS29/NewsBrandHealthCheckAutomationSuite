@@ -34,11 +34,10 @@ jobs:
           command: |
             ls -la target
       - store_artifacts:
-          path: ./target/cucumber-html-report.html
+          path: ./target/cucumber-html-report/
           destination: cucumber-html-report
       - store_test_results:
-          path: ./target/surefire-reports
-          destination: surefire-reports
+          path: ./target/surefire-reports/
 
 workflows:
   version: 2
