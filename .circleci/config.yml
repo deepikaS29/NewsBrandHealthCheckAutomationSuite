@@ -33,10 +33,10 @@ jobs:
           command: |
             ls -la target
       - store_artifacts:
-          path: /home/circleci/project/target/cucumber-html-report.html
+          path: ./target/cucumber-html-report.html
           destination: cucumber-html-report
       - store_test_results:
-          path: /home/circleci/project/target/surefire-reports
+          path: ./target/surefire-reports
           destination: surefire-reports
 
 workflows:
