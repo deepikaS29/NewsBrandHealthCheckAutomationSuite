@@ -30,9 +30,18 @@ jobs:
           command: |
             mvn clean test -Dwebdriver.chrome.driver=/usr/local/bin/chromedriver -Dcucumber.options="--add-opens java.base/java.lang=ALL-UNNAMED --add-opens java.base/java.io=ALL-UNNAMED --add-opens java.base/java.util=ALL-UNNAMED --add-opens java.base/java.util.concurrent=ALL-UNNAMED"
       - run:
-          name: List target directory contents
-          command: |
-            ls -la target
+         name: Print Directory Contents
+         command: |
+          echo "Listing target directory:"
+          ls -la target
+          echo "Listing target/cucumber-html-report directory:"
+          ls -la target/cucumber-html-report
+          echo "Listing target/surefire-reports directory:"
+          ls -la target/surefire-reports
+      - run:
+        name: List target directory contents
+        command: |
+          ls -la target
       - store_artifacts:
           path: ./target/cucumber-html-report/
           destination: cucumber-html-report
