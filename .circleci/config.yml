@@ -36,7 +36,7 @@ jobs:
           path: target/cucumber-html-report.html
           destination: cucumber-html-report
       - store_test_results:
-          path: target/surefire-reports
+          path: target/surefire-reports/TEST-*.xml
           destination: surefire-reports
 
 workflows:
