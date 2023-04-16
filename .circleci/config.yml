@@ -32,7 +32,7 @@ jobs:
       - run:
           name: List target directory contents
           command: |
-            ls -la target
+           find target -type d -exec echo "=== Listing {} ===" \; -exec ls -la {} \;
       - run:
           name: List target/cucumber-html-report directory contents
           command: |
