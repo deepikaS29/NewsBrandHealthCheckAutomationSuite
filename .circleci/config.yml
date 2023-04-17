@@ -29,12 +29,6 @@ jobs:
           name: Build and Test
           command: |
             mvn clean test -Dwebdriver.chrome.driver=/usr/local/bin/chromedriver -Dcucumber.options="--add-opens java.base/java.lang=ALL-UNNAMED --add-opens java.base/java.io=ALL-UNNAMED --add-opens java.base/java.util=ALL-UNNAMED --add-opens java.base/java.util.concurrent=ALL-UNNAMED"
-      - run:
-          name: Generate and store JUnit test results
-          command: |
-            mkdir -p ~/test-results
-            cp target/surefire-reports/cucumber.xml ~/test-results/
-          when: always
       - store_artifacts:
           path: ./target/cucumber-html-report/
           destination: cucumber-html-report

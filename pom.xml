@@ -20,22 +20,22 @@
         <testSourceDirectory>src/test/java</testSourceDirectory>
         <plugins>
             <plugin>
-            <groupId>net.masterthought</groupId>
-            <artifactId>maven-cucumber-reporting</artifactId>
-            <version>5.6.0</version>
-            <executions>
-                <execution>
-                    <id>execution</id>
-                    <phase>verify</phase>
-                    <goals>
-                        <goal>generate</goal>
-                    </goals>
+                <groupId>net.masterthought</groupId>
+                <artifactId>maven-cucumber-reporting</artifactId>
+                <version>5.6.0</version>
+                <executions>
+                    <execution>
+                        <id>execution</id>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>generate</goal>
+                        </goals>
                     <configuration>
                         <projectName>TheCourierHealthCheck</projectName>
-                        <outputDirectory>target/cucumber-html-report/</outputDirectory>
-                        <cucumberOutput>target/cucumber.json</cucumberOutput>
+                        <outputDirectory>target/cucumber-html-report</outputDirectory>
+                        <cucumberOutput>target/cucumber-reports/cucumber.json</cucumberOutput>
                         <jsonFiles>
-                            <param>**/*.json</param>
+                            <directory>target/cucumber-reports</directory>
                         </jsonFiles>
                     </configuration>
                 </execution>
@@ -46,12 +46,14 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>2.22.2</version>
                 <configuration>
-                    <testFailureIgnore>true</testFailureIgnore>
                     <includes>
                         <include>**/*Runner.java</include>
                     </includes>
                     <systemPropertyVariables>
-                        <cucumber.reporting.outputDirectory>target/cucumber-html-report/</cucumber.reporting.outputDirectory>
+                        <cucumber.reporting.outputDirectory>target/cucumber-reports</cucumber.reporting.outputDirectory>
+                        <cucumber.reporting.filePrefix>TEST-cucumber-</cucumber.reporting.filePrefix>
+                        <cucumber.reporting.fileSuffix>.xml</cucumber.reporting.fileSuffix>
+                        <cucumber.options>--plugin json:target/cucumber-reports/cucumber.json:PRETTY</cucumber.options>
                     </systemPropertyVariables>
                 </configuration>
             </plugin>
@@ -85,20 +87,20 @@
         <dependency>
             <groupId>io.cucumber</groupId>
             <artifactId>cucumber-java</artifactId>
-            <version>${cucumber.version}</version>
+            <version>6.10.4</version>
             <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>io.cucumber</groupId>
             <artifactId>cucumber-picocontainer</artifactId>
-            <version>${cucumber.version}</version>
+            <version>6.10.4</version>
             <scope>test</scope>
         </dependency>
 
         <dependency>
             <groupId>io.cucumber</groupId>
             <artifactId>cucumber-junit</artifactId>
-            <version>${cucumber.version}</version>
+            <version>6.10.4</version>
             <scope>test</scope>
         </dependency>
 
@@ -117,6 +119,21 @@
             <groupId>net.masterthought</groupId>
             <artifactId>cucumber-reporting</artifactId>
             <version>3.15.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.github.mkolisnyk</groupId>
+            <artifactId>cucumber-runner</artifactId>
+            <version>1.3.4</version>
+        </dependency>
+        <dependency>
+            <groupId>xml-apis</groupId>
+            <artifactId>xml-apis</artifactId>
+            <version>1.4.01</version>
+        </dependency>
+        <dependency>
+            <groupId>xerces</groupId>
+            <artifactId>xercesImpl</artifactId>
+            <version>2.12.0</version>
         </dependency>
     </dependencies>
 </project>
