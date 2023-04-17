@@ -10,6 +10,9 @@ jobs:
 
     steps:
       - checkout
+      - run:
+          name: Create directory
+          command: mkdir /testReport
       - browser-tools/install-browser-tools:
           chrome-version: "latest"
       - run:
