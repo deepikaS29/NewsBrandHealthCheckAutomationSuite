@@ -11,9 +11,7 @@ jobs:
     steps:
       - checkout
       - run:
-          name: Create directory
-          command: sudo mkdir .
-      - browser-tools/install-browser-tools:
+        - browser-tools/install-browser-tools:
           chrome-version: "latest"
       - run:
           name: Install ChromeDriver
