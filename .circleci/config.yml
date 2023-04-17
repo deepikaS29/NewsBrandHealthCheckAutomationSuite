@@ -1,36 +1,36 @@
-  version: 2.1
+version: 2.1
 
-  orbs:
-    browser-tools: circleci/browser-tools@1.1.0
+orbs:
+  browser-tools: circleci/browser-tools@1.1.0
 
-  jobs:
-    build:
-      docker:
-        - image: circleci/openjdk:8-jdk
+jobs:
+  build:
+    docker:
+      - image: circleci/openjdk:8-jdk
 
-      steps:
-        - checkout
-        - browser-tools/install-browser-tools:
-            chrome-version: "latest"
-        - browser-tools/install-chromedriver:
-            version: "latest"
-        - run:
-            name: Update System Properties
-            command: |
-              echo "webdriver.chrome.driver=/usr/local/bin/chromedriver" > system.properties
-        - run:
-            name: Build and Test
-            command: |
-              mvn clean test -Dwebdriver.chrome.driver=/usr/local/bin/chromedriver -Dcucumber.options="--add-opens java.base/java.lang=ALL-UNNAMED --add-opens java.base/java.io=ALL-UNNAMED --add-opens java.base/java.util=ALL-UNNAMED --add-opens java.base/java.util.concurrent=ALL-UNNAMED"
+    steps:
+      - checkout
+      - browser-tools/install-browser-tools:
+          chrome-version: "latest"
+      - browser-tools/install-chromedriver:
+          chromedriver-version: "latest"
+      - run:
+          name: Update System Properties
+          command: |
+            echo "webdriver.chrome.driver=/usr/local/bin/chromedriver" > system.properties
+      - run:
+          name: Build and Test
+          command: |
+            mvn clean test -Dwebdriver.chrome.driver=/usr/local/bin/chromedriver -Dcucumber.options="--add-opens java.base/java.lang=ALL-UNNAMED --add-opens java.base/java.io=ALL-UNNAMED --add-opens java.base/java.util=ALL-UNNAMED --add-opens java.base/java.util.concurrent=ALL-UNNAMED"
 
-        - store_artifacts:
-            path: ./target/cucumber-html-report/
-            destination: cucumber-html-report
-        - store_test_results:
-            path: ./target/surefire-reports/
+      - store_artifacts:
+          path: ./target/cucumber-html-report/
+          destination: cucumber-html-report
+      - store_test_results:
+          path: ./target/surefire-reports/
 
-  workflows:
-    version: 2
-    test-workflow:
-      jobs:
-        - build
+workflows:
+  version: 2
+  test-workflow:
+    jobs:
+      - build
