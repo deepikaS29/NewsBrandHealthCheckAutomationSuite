@@ -12,7 +12,7 @@ jobs:
       - checkout
       - run:
         - browser-tools/install-browser-tools:
-          chrome-version: "latest"
+        - chrome-version: "latest"
       - run:
           name: Install ChromeDriver
           command: |
