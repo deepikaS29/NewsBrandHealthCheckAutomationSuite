@@ -12,7 +12,7 @@ jobs:
       - checkout
       - run:
           name: Create directory
-          command: sudo mkdir /testReport
+          command: sudo mkdir .
       - browser-tools/install-browser-tools:
           chrome-version: "latest"
       - run:
