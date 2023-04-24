@@ -1,6 +1,6 @@
 package com.example.StepDefinition;
 
-import Pages.RegistrationPage;
+import com.example.StepDefinition.Pages.RegistrationPage;
 import Utility.CommonLibrary;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.And;

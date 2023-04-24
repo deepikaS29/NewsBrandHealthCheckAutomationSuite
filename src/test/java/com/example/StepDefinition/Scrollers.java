@@ -1,6 +1,6 @@
 package com.example.StepDefinition;
 
-import Pages.ScrollersPage;
+import com.example.StepDefinition.Pages.ScrollersPage;
 import Utility.CommonLibrary;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.Then;

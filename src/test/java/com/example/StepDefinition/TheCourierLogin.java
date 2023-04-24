@@ -1,6 +1,6 @@
 package com.example.StepDefinition;
 
-import Pages.LoginPage;
+import com.example.StepDefinition.Pages.LoginPage;
 
 import Utility.CommonLibrary;
 import io.cucumber.datatable.DataTable;

@@ -1,4 +1,4 @@
-package Pages;
+package com.example.StepDefinition.Pages;
 
 import Utility.CommonLibrary;
 import org.openqa.selenium.JavascriptExecutor;
