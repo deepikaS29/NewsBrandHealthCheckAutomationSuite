@@ -31,6 +31,7 @@ public class TheCourierLoginStepDefinition extends CommonLibrary {
         // driver.findElement(By.xpath("/html/body/header/div[1]/div[2]/div[2]/a")).click();
         loginPage.click_login_lnk();
         Thread.sleep(2000);
+        //This is a comment for git demo
     }
 
     @Then("Login page is open")
