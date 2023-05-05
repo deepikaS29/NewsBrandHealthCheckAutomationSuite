@@ -10,7 +10,7 @@ import io.cucumber.java.en.When;
 
 import java.util.Map;
 
-public class TheCourierLogin extends CommonLibrary {
+public class TheCourierLoginStepDefinition extends CommonLibrary {
     LoginPage loginPage=new LoginPage();
     @Given("Launch The Courier URL {string}")
     public void launch_the_courier_url(String url) {

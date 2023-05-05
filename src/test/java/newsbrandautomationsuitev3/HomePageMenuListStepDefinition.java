@@ -14,7 +14,7 @@ import java.util.Date;
 import java.util.Map;
 
 
-public class HomePageMenuList extends CommonLibrary {
+public class HomePageMenuListStepDefinition extends CommonLibrary {
 
     HomePage homePage=new HomePage();
 
