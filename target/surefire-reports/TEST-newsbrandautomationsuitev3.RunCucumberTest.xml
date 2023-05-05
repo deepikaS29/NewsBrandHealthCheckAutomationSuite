@@ -1,0 +1,419 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="newsbrandautomationsuitev3.RunCucumberTest" time="131.897" tests="8" errors="0" skipped="0" failures="2">
+  <properties>
+    <property name="java.specification.version" value="20"/>
+    <property name="webdriver.chrome.driver" value="C:\Users\deepika.singh.DCTHOMSON\.cache\selenium\chromedriver\win32\112.0.5615.49\chromedriver.exe"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.class.path" value="C:\Test Automation\newsbrandautomationsuitev3\target\test-classes;C:\Test Automation\newsbrandautomationsuitev3\target\classes;C:\Users\deepika.singh.DCTHOMSON\.m2\repository\io\cucumber\cucumber-java\7.12.0\cucumber-java-7.12.0.jar;C:\Users\deepika.singh.DCTHOMSON\.m2\repository\io\cucumber\cucumber-core\7.12.0\cucumber-core-7.12.0.jar;C:\Users\deepika.singh.DCTHOMSON\.m2\repository\io\cucumber\cucumber-gherkin\7.12.0\cucumber-gherkin-7.12.0.jar;C:\Users\deepika.singh.DCTHOMSON\.m2\repository\io\cucumber\cucumber-gherkin-messages\7.12.0\cucumber-gherkin-messages-7.12.0.jar;C:\Users\deepika.singh.DCTHOMSON\.m2\repository\io\cucumber\gherkin\26.2.0\gherkin-26.2.0.jar;C:\Users\deepika.singh.DCTHOMSON\.m2\repository\io\cucumber\messages\22.0.0\messages-22.0.0.jar;C:\Users\deepika.singh.DCTHOMSON\.m2\repository\io\cucumber\tag-expressions\5.0.1\tag-expressions-5.0.1.jar;C:\Users\deepika.singh.DCTHOMSON\.m2\repository\io\cucumber\cucumber-expressions\16.1.2\cucumber-expressions-16.1.2.jar;C:\Users\deepika.singh.DCTHOMSON\.m2\repository\io\cucumber\datatable\7.12.0\datatable-7.12.0.jar;C:\Users\deepika.singh.DCTHOMSON\.m2\repository\io\cucumber\cucumber-plugin\7.12.0\cucumber-plugin-7.12.0.jar;C:\Users\deepika.singh.DCTHOMSON\.m2\repository\io\cucumber\docstring\7.12.0\docstring-7.12.0.jar;C:\Users\deepika.singh.DCTHOMSON\.m2\repository\io\cucumber\html-formatter\20.3.0\html-formatter-20.3.0.jar;C:\Users\deepika.singh.DCTHOMSON\.m2\repository\io\cucumber\junit-xml-formatter\0.2.0\junit-xml-formatter-0.2.0.jar;C:\Users\deepika.singh.DCTHOMSON\.m2\repository\io\cucumber\ci-environment\9.2.0\ci-environment-9.2.0.jar;C:\Users\deepika.singh.DCTHOMSON\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\deepika.singh.DCTHOMSON\.m2\repository\io\cucumber\cucumber-junit-platform-engine\7.12.0\cucumber-junit-platform-engine-7.12.0.jar;C:\Users\deepika.singh.DCTHOMSON\.m2\repository\org\junit\platform\junit-platform-engine\1.9.3\junit-platform-engine-1.9.3.jar;C:\Users\deepika.singh.DCTHOMSON\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\deepika.singh.DCTHOMSON\.m2\repository\org\junit\platform\junit-platform-commons\1.9.3\junit-platform-commons-1.9.3.jar;C:\Users\deepika.singh.DCTHOMSON\.m2\repository\org\junit\platform\junit-platform-suite\1.9.3\junit-platform-suite-1.9.3.jar;C:\Users\deepika.singh.DCTHOMSON\.m2\repository\org\junit\platform\junit-platform-suite-api\1.9.3\junit-platform-suite-api-1.9.3.jar;C:\Users\deepika.singh.DCTHOMSON\.m2\repository\org\junit\platform\junit-platform-suite-engine\1.9.3\junit-platform-suite-engine-1.9.3.jar;C:\Users\deepika.singh.DCTHOMSON\.m2\repository\org\junit\platform\junit-platform-suite-commons\1.9.3\junit-platform-suite-commons-1.9.3.jar;C:\Users\deepika.singh.DCTHOMSON\.m2\repository\org\junit\platform\junit-platform-launcher\1.9.3\junit-platform-launcher-1.9.3.jar;C:\Users\deepika.singh.DCTHOMSON\.m2\repository\org\junit\jupiter\junit-jupiter\5.9.3\junit-jupiter-5.9.3.jar;C:\Users\deepika.singh.DCTHOMSON\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.9.3\junit-jupiter-api-5.9.3.jar;C:\Users\deepika.singh.DCTHOMSON\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.9.3\junit-jupiter-params-5.9.3.jar;C:\Users\deepika.singh.DCTHOMSON\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.9.3\junit-jupiter-engine-5.9.3.jar;C:\Users\deepika.singh.DCTHOMSON\.m2\repository\io\github\bonigarcia\webdrivermanager\5.2.2\webdrivermanager-5.2.2.jar;C:\Users\deepika.singh.DCTHOMSON\.m2\repository\org\slf4j\slf4j-api\1.7.36\slf4j-api-1.7.36.jar;C:\Users\deepika.singh.DCTHOMSON\.m2\repository\com\google\code\gson\gson\2.9.0\gson-2.9.0.jar;C:\Users\deepika.singh.DCTHOMSON\.m2\repository\com\github\docker-java\docker-java\3.2.13\docker-java-3.2.13.jar;C:\Users\deepika.singh.DCTHOMSON\.m2\repository\com\github\docker-java\docker-java-core\3.2.13\docker-java-core-3.2.13.jar;C:\Users\deepika.singh.DCTHOMSON\.m2\repository\com\github\docker-java\docker-java-api\3.2.13\docker-java-api-3.2.13.jar;C:\Users\deepika.singh.DCTHOMSON\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.10.3\jackson-annotations-2.10.3.jar;C:\Users\deepika.singh.DCTHOMSON\.m2\repository\commons-io\commons-io\2.6\commons-io-2.6.jar;C:\Users\deepika.singh.DCTHOMSON\.m2\repository\org\apache\commons\commons-compress\1.21\commons-compress-1.21.jar;C:\Users\deepika.singh.DCTHOMSON\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.10.3\jackson-databind-2.10.3.jar;C:\Users\deepika.singh.DCTHOMSON\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.10.3\jackson-core-2.10.3.jar;C:\Users\deepika.singh.DCTHOMSON\.m2\repository\org\bouncycastle\bcpkix-jdk15on\1.64\bcpkix-jdk15on-1.64.jar;C:\Users\deepika.singh.DCTHOMSON\.m2\repository\org\bouncycastle\bcprov-jdk15on\1.64\bcprov-jdk15on-1.64.jar;C:\Users\deepika.singh.DCTHOMSON\.m2\repository\org\slf4j\jcl-over-slf4j\1.7.30\jcl-over-slf4j-1.7.30.jar;C:\Users\deepika.singh.DCTHOMSON\.m2\repository\com\github\docker-java\docker-java-transport-httpclient5\3.2.13\docker-java-transport-httpclient5-3.2.13.jar;C:\Users\deepika.singh.DCTHOMSON\.m2\repository\com\github\docker-java\docker-java-transport\3.2.13\docker-java-transport-3.2.13.jar;C:\Users\deepika.singh.DCTHOMSON\.m2\repository\net\java\dev\jna\jna\5.8.0\jna-5.8.0.jar;C:\Users\deepika.singh.DCTHOMSON\.m2\repository\org\brotli\dec\0.1.2\dec-0.1.2.jar;C:\Users\deepika.singh.DCTHOMSON\.m2\repository\org\apache\commons\commons-lang3\3.12.0\commons-lang3-3.12.0.jar;C:\Users\deepika.singh.DCTHOMSON\.m2\repository\org\apache\httpcomponents\client5\httpclient5\5.1.3\httpclient5-5.1.3.jar;C:\Users\deepika.singh.DCTHOMSON\.m2\repository\org\apache\httpcomponents\core5\httpcore5\5.1.3\httpcore5-5.1.3.jar;C:\Users\deepika.singh.DCTHOMSON\.m2\repository\org\apache\httpcomponents\core5\httpcore5-h2\5.1.3\httpcore5-h2-5.1.3.jar;C:\Users\deepika.singh.DCTHOMSON\.m2\repository\commons-codec\commons-codec\1.15\commons-codec-1.15.jar;C:\Users\deepika.singh.DCTHOMSON\.m2\repository\org\seleniumhq\selenium\selenium-java\3.141.59\selenium-java-3.141.59.jar;C:\Users\deepika.singh.DCTHOMSON\.m2\repository\org\seleniumhq\selenium\selenium-api\3.141.59\selenium-api-3.141.59.jar;C:\Users\deepika.singh.DCTHOMSON\.m2\repository\org\seleniumhq\selenium\selenium-chrome-driver\3.141.59\selenium-chrome-driver-3.141.59.jar;C:\Users\deepika.singh.DCTHOMSON\.m2\repository\org\seleniumhq\selenium\selenium-edge-driver\3.141.59\selenium-edge-driver-3.141.59.jar;C:\Users\deepika.singh.DCTHOMSON\.m2\repository\org\seleniumhq\selenium\selenium-firefox-driver\3.141.59\selenium-firefox-driver-3.141.59.jar;C:\Users\deepika.singh.DCTHOMSON\.m2\repository\org\seleniumhq\selenium\selenium-ie-driver\3.141.59\selenium-ie-driver-3.141.59.jar;C:\Users\deepika.singh.DCTHOMSON\.m2\repository\org\seleniumhq\selenium\selenium-opera-driver\3.141.59\selenium-opera-driver-3.141.59.jar;C:\Users\deepika.singh.DCTHOMSON\.m2\repository\org\seleniumhq\selenium\selenium-remote-driver\3.141.59\selenium-remote-driver-3.141.59.jar;C:\Users\deepika.singh.DCTHOMSON\.m2\repository\org\seleniumhq\selenium\selenium-safari-driver\3.141.59\selenium-safari-driver-3.141.59.jar;C:\Users\deepika.singh.DCTHOMSON\.m2\repository\org\seleniumhq\selenium\selenium-support\3.141.59\selenium-support-3.141.59.jar;C:\Users\deepika.singh.DCTHOMSON\.m2\repository\net\bytebuddy\byte-buddy\1.8.15\byte-buddy-1.8.15.jar;C:\Users\deepika.singh.DCTHOMSON\.m2\repository\org\apache\commons\commons-exec\1.3\commons-exec-1.3.jar;C:\Users\deepika.singh.DCTHOMSON\.m2\repository\com\google\guava\guava\25.0-jre\guava-25.0-jre.jar;C:\Users\deepika.singh.DCTHOMSON\.m2\repository\com\google\code\findbugs\jsr305\1.3.9\jsr305-1.3.9.jar;C:\Users\deepika.singh.DCTHOMSON\.m2\repository\org\checkerframework\checker-compat-qual\2.0.0\checker-compat-qual-2.0.0.jar;C:\Users\deepika.singh.DCTHOMSON\.m2\repository\com\google\errorprone\error_prone_annotations\2.1.3\error_prone_annotations-2.1.3.jar;C:\Users\deepika.singh.DCTHOMSON\.m2\repository\com\google\j2objc\j2objc-annotations\1.1\j2objc-annotations-1.1.jar;C:\Users\deepika.singh.DCTHOMSON\.m2\repository\org\codehaus\mojo\animal-sniffer-annotations\1.14\animal-sniffer-annotations-1.14.jar;C:\Users\deepika.singh.DCTHOMSON\.m2\repository\com\squareup\okhttp3\okhttp\3.11.0\okhttp-3.11.0.jar;C:\Users\deepika.singh.DCTHOMSON\.m2\repository\com\squareup\okio\okio\1.14.0\okio-1.14.0.jar;C:\Users\deepika.singh.DCTHOMSON\.m2\repository\xml-apis\xml-apis\1.4.01\xml-apis-1.4.01.jar;C:\Users\deepika.singh.DCTHOMSON\.m2\repository\xerces\xercesImpl\2.12.0\xercesImpl-2.12.0.jar;C:\Users\deepika.singh.DCTHOMSON\.m2\repository\junit\junit\4.13.1\junit-4.13.1.jar;C:\Users\deepika.singh.DCTHOMSON\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="user.variant" value=""/>
+    <property name="java.vendor.url" value="https://java.oracle.com/"/>
+    <property name="user.timezone" value="Europe/London"/>
+    <property name="os.name" value="Windows 10"/>
+    <property name="java.vm.specification.version" value="20"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="GB"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-20\bin"/>
+    <property name="sun.java.command" value="C:\Users\deepika.singh.DCTHOMSON\AppData\Local\Temp\surefire6994213477468897093\surefirebooter-20230505131411539_3.jar C:\Users\deepika.singh.DCTHOMSON\AppData\Local\Temp\surefire6994213477468897093 2023-05-05T13-14-11_366-jvmRun1 surefire-20230505131411539_1tmp surefire_0-20230505131411539_2tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="C:\Test Automation\newsbrandautomationsuitev3\target\test-classes;C:\Test Automation\newsbrandautomationsuitev3\target\classes;C:\Users\deepika.singh.DCTHOMSON\.m2\repository\io\cucumber\cucumber-java\7.12.0\cucumber-java-7.12.0.jar;C:\Users\deepika.singh.DCTHOMSON\.m2\repository\io\cucumber\cucumber-core\7.12.0\cucumber-core-7.12.0.jar;C:\Users\deepika.singh.DCTHOMSON\.m2\repository\io\cucumber\cucumber-gherkin\7.12.0\cucumber-gherkin-7.12.0.jar;C:\Users\deepika.singh.DCTHOMSON\.m2\repository\io\cucumber\cucumber-gherkin-messages\7.12.0\cucumber-gherkin-messages-7.12.0.jar;C:\Users\deepika.singh.DCTHOMSON\.m2\repository\io\cucumber\gherkin\26.2.0\gherkin-26.2.0.jar;C:\Users\deepika.singh.DCTHOMSON\.m2\repository\io\cucumber\messages\22.0.0\messages-22.0.0.jar;C:\Users\deepika.singh.DCTHOMSON\.m2\repository\io\cucumber\tag-expressions\5.0.1\tag-expressions-5.0.1.jar;C:\Users\deepika.singh.DCTHOMSON\.m2\repository\io\cucumber\cucumber-expressions\16.1.2\cucumber-expressions-16.1.2.jar;C:\Users\deepika.singh.DCTHOMSON\.m2\repository\io\cucumber\datatable\7.12.0\datatable-7.12.0.jar;C:\Users\deepika.singh.DCTHOMSON\.m2\repository\io\cucumber\cucumber-plugin\7.12.0\cucumber-plugin-7.12.0.jar;C:\Users\deepika.singh.DCTHOMSON\.m2\repository\io\cucumber\docstring\7.12.0\docstring-7.12.0.jar;C:\Users\deepika.singh.DCTHOMSON\.m2\repository\io\cucumber\html-formatter\20.3.0\html-formatter-20.3.0.jar;C:\Users\deepika.singh.DCTHOMSON\.m2\repository\io\cucumber\junit-xml-formatter\0.2.0\junit-xml-formatter-0.2.0.jar;C:\Users\deepika.singh.DCTHOMSON\.m2\repository\io\cucumber\ci-environment\9.2.0\ci-environment-9.2.0.jar;C:\Users\deepika.singh.DCTHOMSON\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\deepika.singh.DCTHOMSON\.m2\repository\io\cucumber\cucumber-junit-platform-engine\7.12.0\cucumber-junit-platform-engine-7.12.0.jar;C:\Users\deepika.singh.DCTHOMSON\.m2\repository\org\junit\platform\junit-platform-engine\1.9.3\junit-platform-engine-1.9.3.jar;C:\Users\deepika.singh.DCTHOMSON\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\deepika.singh.DCTHOMSON\.m2\repository\org\junit\platform\junit-platform-commons\1.9.3\junit-platform-commons-1.9.3.jar;C:\Users\deepika.singh.DCTHOMSON\.m2\repository\org\junit\platform\junit-platform-suite\1.9.3\junit-platform-suite-1.9.3.jar;C:\Users\deepika.singh.DCTHOMSON\.m2\repository\org\junit\platform\junit-platform-suite-api\1.9.3\junit-platform-suite-api-1.9.3.jar;C:\Users\deepika.singh.DCTHOMSON\.m2\repository\org\junit\platform\junit-platform-suite-engine\1.9.3\junit-platform-suite-engine-1.9.3.jar;C:\Users\deepika.singh.DCTHOMSON\.m2\repository\org\junit\platform\junit-platform-suite-commons\1.9.3\junit-platform-suite-commons-1.9.3.jar;C:\Users\deepika.singh.DCTHOMSON\.m2\repository\org\junit\platform\junit-platform-launcher\1.9.3\junit-platform-launcher-1.9.3.jar;C:\Users\deepika.singh.DCTHOMSON\.m2\repository\org\junit\jupiter\junit-jupiter\5.9.3\junit-jupiter-5.9.3.jar;C:\Users\deepika.singh.DCTHOMSON\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.9.3\junit-jupiter-api-5.9.3.jar;C:\Users\deepika.singh.DCTHOMSON\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.9.3\junit-jupiter-params-5.9.3.jar;C:\Users\deepika.singh.DCTHOMSON\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.9.3\junit-jupiter-engine-5.9.3.jar;C:\Users\deepika.singh.DCTHOMSON\.m2\repository\io\github\bonigarcia\webdrivermanager\5.2.2\webdrivermanager-5.2.2.jar;C:\Users\deepika.singh.DCTHOMSON\.m2\repository\org\slf4j\slf4j-api\1.7.36\slf4j-api-1.7.36.jar;C:\Users\deepika.singh.DCTHOMSON\.m2\repository\com\google\code\gson\gson\2.9.0\gson-2.9.0.jar;C:\Users\deepika.singh.DCTHOMSON\.m2\repository\com\github\docker-java\docker-java\3.2.13\docker-java-3.2.13.jar;C:\Users\deepika.singh.DCTHOMSON\.m2\repository\com\github\docker-java\docker-java-core\3.2.13\docker-java-core-3.2.13.jar;C:\Users\deepika.singh.DCTHOMSON\.m2\repository\com\github\docker-java\docker-java-api\3.2.13\docker-java-api-3.2.13.jar;C:\Users\deepika.singh.DCTHOMSON\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.10.3\jackson-annotations-2.10.3.jar;C:\Users\deepika.singh.DCTHOMSON\.m2\repository\commons-io\commons-io\2.6\commons-io-2.6.jar;C:\Users\deepika.singh.DCTHOMSON\.m2\repository\org\apache\commons\commons-compress\1.21\commons-compress-1.21.jar;C:\Users\deepika.singh.DCTHOMSON\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.10.3\jackson-databind-2.10.3.jar;C:\Users\deepika.singh.DCTHOMSON\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.10.3\jackson-core-2.10.3.jar;C:\Users\deepika.singh.DCTHOMSON\.m2\repository\org\bouncycastle\bcpkix-jdk15on\1.64\bcpkix-jdk15on-1.64.jar;C:\Users\deepika.singh.DCTHOMSON\.m2\repository\org\bouncycastle\bcprov-jdk15on\1.64\bcprov-jdk15on-1.64.jar;C:\Users\deepika.singh.DCTHOMSON\.m2\repository\org\slf4j\jcl-over-slf4j\1.7.30\jcl-over-slf4j-1.7.30.jar;C:\Users\deepika.singh.DCTHOMSON\.m2\repository\com\github\docker-java\docker-java-transport-httpclient5\3.2.13\docker-java-transport-httpclient5-3.2.13.jar;C:\Users\deepika.singh.DCTHOMSON\.m2\repository\com\github\docker-java\docker-java-transport\3.2.13\docker-java-transport-3.2.13.jar;C:\Users\deepika.singh.DCTHOMSON\.m2\repository\net\java\dev\jna\jna\5.8.0\jna-5.8.0.jar;C:\Users\deepika.singh.DCTHOMSON\.m2\repository\org\brotli\dec\0.1.2\dec-0.1.2.jar;C:\Users\deepika.singh.DCTHOMSON\.m2\repository\org\apache\commons\commons-lang3\3.12.0\commons-lang3-3.12.0.jar;C:\Users\deepika.singh.DCTHOMSON\.m2\repository\org\apache\httpcomponents\client5\httpclient5\5.1.3\httpclient5-5.1.3.jar;C:\Users\deepika.singh.DCTHOMSON\.m2\repository\org\apache\httpcomponents\core5\httpcore5\5.1.3\httpcore5-5.1.3.jar;C:\Users\deepika.singh.DCTHOMSON\.m2\repository\org\apache\httpcomponents\core5\httpcore5-h2\5.1.3\httpcore5-h2-5.1.3.jar;C:\Users\deepika.singh.DCTHOMSON\.m2\repository\commons-codec\commons-codec\1.15\commons-codec-1.15.jar;C:\Users\deepika.singh.DCTHOMSON\.m2\repository\org\seleniumhq\selenium\selenium-java\3.141.59\selenium-java-3.141.59.jar;C:\Users\deepika.singh.DCTHOMSON\.m2\repository\org\seleniumhq\selenium\selenium-api\3.141.59\selenium-api-3.141.59.jar;C:\Users\deepika.singh.DCTHOMSON\.m2\repository\org\seleniumhq\selenium\selenium-chrome-driver\3.141.59\selenium-chrome-driver-3.141.59.jar;C:\Users\deepika.singh.DCTHOMSON\.m2\repository\org\seleniumhq\selenium\selenium-edge-driver\3.141.59\selenium-edge-driver-3.141.59.jar;C:\Users\deepika.singh.DCTHOMSON\.m2\repository\org\seleniumhq\selenium\selenium-firefox-driver\3.141.59\selenium-firefox-driver-3.141.59.jar;C:\Users\deepika.singh.DCTHOMSON\.m2\repository\org\seleniumhq\selenium\selenium-ie-driver\3.141.59\selenium-ie-driver-3.141.59.jar;C:\Users\deepika.singh.DCTHOMSON\.m2\repository\org\seleniumhq\selenium\selenium-opera-driver\3.141.59\selenium-opera-driver-3.141.59.jar;C:\Users\deepika.singh.DCTHOMSON\.m2\repository\org\seleniumhq\selenium\selenium-remote-driver\3.141.59\selenium-remote-driver-3.141.59.jar;C:\Users\deepika.singh.DCTHOMSON\.m2\repository\org\seleniumhq\selenium\selenium-safari-driver\3.141.59\selenium-safari-driver-3.141.59.jar;C:\Users\deepika.singh.DCTHOMSON\.m2\repository\org\seleniumhq\selenium\selenium-support\3.141.59\selenium-support-3.141.59.jar;C:\Users\deepika.singh.DCTHOMSON\.m2\repository\net\bytebuddy\byte-buddy\1.8.15\byte-buddy-1.8.15.jar;C:\Users\deepika.singh.DCTHOMSON\.m2\repository\org\apache\commons\commons-exec\1.3\commons-exec-1.3.jar;C:\Users\deepika.singh.DCTHOMSON\.m2\repository\com\google\guava\guava\25.0-jre\guava-25.0-jre.jar;C:\Users\deepika.singh.DCTHOMSON\.m2\repository\com\google\code\findbugs\jsr305\1.3.9\jsr305-1.3.9.jar;C:\Users\deepika.singh.DCTHOMSON\.m2\repository\org\checkerframework\checker-compat-qual\2.0.0\checker-compat-qual-2.0.0.jar;C:\Users\deepika.singh.DCTHOMSON\.m2\repository\com\google\errorprone\error_prone_annotations\2.1.3\error_prone_annotations-2.1.3.jar;C:\Users\deepika.singh.DCTHOMSON\.m2\repository\com\google\j2objc\j2objc-annotations\1.1\j2objc-annotations-1.1.jar;C:\Users\deepika.singh.DCTHOMSON\.m2\repository\org\codehaus\mojo\animal-sniffer-annotations\1.14\animal-sniffer-annotations-1.14.jar;C:\Users\deepika.singh.DCTHOMSON\.m2\repository\com\squareup\okhttp3\okhttp\3.11.0\okhttp-3.11.0.jar;C:\Users\deepika.singh.DCTHOMSON\.m2\repository\com\squareup\okio\okio\1.14.0\okio-1.14.0.jar;C:\Users\deepika.singh.DCTHOMSON\.m2\repository\xml-apis\xml-apis\1.4.01\xml-apis-1.4.01.jar;C:\Users\deepika.singh.DCTHOMSON\.m2\repository\xerces\xercesImpl\2.12.0\xercesImpl-2.12.0.jar;C:\Users\deepika.singh.DCTHOMSON\.m2\repository\junit\junit\4.13.1\junit-4.13.1.jar;C:\Users\deepika.singh.DCTHOMSON\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="C:\Users\deepika.singh.DCTHOMSON"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2023-03-21"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk-20"/>
+    <property name="file.separator" value="\"/>
+    <property name="basedir" value="C:\Test Automation\newsbrandautomationsuitev3"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="surefire.real.class.path" value="C:\Users\deepika.singh.DCTHOMSON\AppData\Local\Temp\surefire6994213477468897093\surefirebooter-20230505131411539_3.jar"/>
+    <property name="user.script" value=""/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="20+36-2344"/>
+    <property name="user.name" value="deepika.singh"/>
+    <property name="stdout.encoding" value="Cp1252"/>
+    <property name="path.separator" value=";"/>
+    <property name="os.version" value="10.0"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="localRepository" value="C:\Users\deepika.singh.DCTHOMSON\.m2\repository"/>
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="C:\Users\DEEPIK~1.DCT\AppData\Local\Temp\"/>
+    <property name="java.version" value="20"/>
+    <property name="user.dir" value="C:\Test Automation\newsbrandautomationsuitev3"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="native.encoding" value="Cp1252"/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk-20\bin;C:\windows\Sun\Java\bin;C:\windows\system32;C:\windows;C:\Program Files\Common Files\Oracle\Java\javapath;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\apache-maven-3.9.1\bin;C:\Program Files\Java\jdk-20\bin;C:\Users\deepika.singh.DCTHOMSON\AppData\Local\Microsoft\WindowsApps;C:\Users\deepika.singh.DCTHOMSON\AppData\Local\Programs\Git\cmd;."/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="stderr.encoding" value="Cp1252"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.version" value="20+36-2344"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="64.0"/>
+  </properties>
+  <testcase name="Verify Menu Options" classname="Verify Home Page Features" time="8.414">
+    <system-out><![CDATA[
+@Home-page-menu
+Scenario: Verify Menu Options                                   &amp#27;[90m# newsbrandautomationsuitev3/homepage.feature:4&amp#27;[0m
+User accepted the privacy terms and conditions
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mUser click the i accept button&amp#27;[0m                           &amp#27;[90m# newsbrandautomationsuitev3.TheCourierLoginStepDefinition.u_ser_click_the_i_accept_button()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mClick on Menu option&amp#27;[0m                                      &amp#27;[90m# newsbrandautomationsuitev3.HomePageMenuListStepDefinition.clickMenuOption()&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mVerify all links like News,Politics,Sports,Lifestyle etc&amp#27;[0m &amp#27;[90m# newsbrandautomationsuitev3.HomePageMenuListStepDefinition.verifyMenuOptions(io.cucumber.datatable.DataTable)&amp#27;[0m
+    | MenuOptions   |
+    | News          |
+    | Politics      |
+    | Sport         |
+    | Lifestyle     |
+    | Education     |
+    | Entertainment |
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mTake screenshot of the page&amp#27;[0m                               &amp#27;[90m# newsbrandautomationsuitev3.HomePageMenuListStepDefinition.takeScreenshot()&amp#27;[0m
+]]></system-out>
+    <system-err><![CDATA[SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+May 05, 2023 1:14:13 PM org.openqa.selenium.remote.DesiredCapabilities chrome
+INFO: Using `new ChromeOptions()` is preferred to `DesiredCapabilities.chrome()`
+Starting ChromeDriver 112.0.5615.49 (bd2a7bcb881c11e8cfe3078709382934e3916914-refs/branch-heads/5615@{#936}) on port 23304
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+May 05, 2023 1:14:15 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+]]></system-err>
+  </testcase>
+  <testcase name="Verify Menu tabs" classname="Verify Home Page Features" time="56.663">
+    <system-out><![CDATA[
+Scenario: Verify Menu tabs                                               &amp#27;[90m# newsbrandautomationsuitev3/homepage.feature:17&amp#27;[0m
+User accepted the privacy terms and conditions
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mUser click the i accept button&amp#27;[0m                                    &amp#27;[90m# newsbrandautomationsuitev3.TheCourierLoginStepDefinition.u_ser_click_the_i_accept_button()&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mverify and click all tabs like News,Politics,Sports,Lifestyle etc&amp#27;[0m &amp#27;[90m# newsbrandautomationsuitev3.HomePageMenuListStepDefinition.verifyMenuTabOptions(io.cucumber.datatable.DataTable)&amp#27;[0m
+    | MenuOptions            |
+    | News                   |
+    | Politics               |
+    | Sport                  |
+    | Lifestyle              |
+    | Education              |
+    | Entertainment          |
+    | Courier Investigations |
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mTake screenshot of the page&amp#27;[0m                                        &amp#27;[90m# newsbrandautomationsuitev3.HomePageMenuListStepDefinition.takeScreenshot()&amp#27;[0m
+]]></system-out>
+    <system-err><![CDATA[May 05, 2023 1:14:20 PM org.openqa.selenium.remote.DesiredCapabilities chrome
+INFO: Using `new ChromeOptions()` is preferred to `DesiredCapabilities.chrome()`
+Starting ChromeDriver 112.0.5615.49 (bd2a7bcb881c11e8cfe3078709382934e3916914-refs/branch-heads/5615@{#936}) on port 37747
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+May 05, 2023 1:14:21 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+org.openqa.selenium.WebDriverException: unknown error: cannot determine loading status
+from no such window
+  (Session info: chrome=112.0.5615.138)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DCT-DIL-7Y9YKL3', ip: '138.250.184.117', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '20'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 112.0.5615.138, chrome: {chromedriverVersion: 112.0.5615.49 (bd2a7bcb881c..., userDataDir: C:\Users\DEEPIK~1.DCT\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:54260}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 7f97f4b8e43a2733d561884062b7bb98
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:609)
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteNavigation.back(RemoteWebDriver.java:849)
+	at newsbrandautomationsuitev3.HomePageMenuListStepDefinition.verifyMenuTabOptions(HomePageMenuListStepDefinition.java:63)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at io.cucumber.java.Invoker.doInvoke(Invoker.java:66)
+	at io.cucumber.java.Invoker.invoke(Invoker.java:24)
+	at io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)
+	at io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29)
+	at io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66)
+	at io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)
+	at io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)
+	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:84)
+	at io.cucumber.core.runner.TestStep.run(TestStep.java:56)
+	at io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)
+	at io.cucumber.core.runner.TestCase.run(TestCase.java:84)
+	at io.cucumber.core.runner.Runner.runPickle(Runner.java:75)
+	at io.cucumber.junit.platform.engine.CucumberEngineExecutionContext.lambda$runTestCase$4(CucumberEngineExecutionContext.java:112)
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:137)
+	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:137)
+	at io.cucumber.junit.platform.engine.CucumberEngineExecutionContext.runTestCase(CucumberEngineExecutionContext.java:109)
+	at io.cucumber.junit.platform.engine.NodeDescriptor$PickleDescriptor.execute(NodeDescriptor.java:168)
+	at io.cucumber.junit.platform.engine.NodeDescriptor$PickleDescriptor.execute(NodeDescriptor.java:90)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:147)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:127)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:90)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:73)
+	at org.junit.platform.suite.engine.SuiteLauncher.execute(SuiteLauncher.java:63)
+	at org.junit.platform.suite.engine.SuiteTestDescriptor.execute(SuiteTestDescriptor.java:128)
+	at org.junit.platform.suite.engine.SuiteTestEngine.lambda$execute$0(SuiteTestEngine.java:73)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.Iterator.forEachRemaining(Iterator.java:133)
+	at java.base/java.util.Spliterators$IteratorSpliterator.forEachRemaining(Spliterators.java:1921)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596)
+	at org.junit.platform.suite.engine.SuiteTestEngine.execute(SuiteTestEngine.java:73)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:147)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:127)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:90)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:55)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:102)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:54)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:86)
+	at org.junit.platform.launcher.core.DefaultLauncherSession$DelegatingLauncher.execute(DefaultLauncherSession.java:86)
+	at org.apache.maven.surefire.junitplatform.LazyLauncher.execute(LazyLauncher.java:50)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:184)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:148)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:122)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+]]></system-err>
+  </testcase>
+  <testcase name="Example #1.1" classname="Examples" time="15.022">
+    <system-out><![CDATA[
+Scenario Outline: Verify the search details        &amp#27;[90m# newsbrandautomationsuitev3/homepage.feature:37&amp#27;[0m
+User accepted the privacy terms and conditions
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mUser click the i accept button&amp#27;[0m              &amp#27;[90m# newsbrandautomationsuitev3.TheCourierLoginStepDefinition.u_ser_click_the_i_accept_button()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mclick on searchIcon and enter keyword &amp#27;[0m&amp#27;[32m&amp#27;[1m"life"&amp#27;[0m &amp#27;[90m# newsbrandautomationsuitev3.HomePageMenuListStepDefinition.clickSearchIconanEnter(java.lang.String)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mclick Go button&amp#27;[0m                              &amp#27;[90m# newsbrandautomationsuitev3.HomePageMenuListStepDefinition.clickGobutton()&amp#27;[0m
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mverify the search details &amp#27;[0m&amp#27;[32m&amp#27;[1m"life"&amp#27;[0m            &amp#27;[90m# newsbrandautomationsuitev3.HomePageMenuListStepDefinition.verifySearchdetails(java.lang.String)&amp#27;[0m
+]]></system-out>
+    <system-err><![CDATA[May 05, 2023 1:15:17 PM org.openqa.selenium.remote.DesiredCapabilities chrome
+INFO: Using `new ChromeOptions()` is preferred to `DesiredCapabilities.chrome()`
+Starting ChromeDriver 112.0.5615.49 (bd2a7bcb881c11e8cfe3078709382934e3916914-refs/branch-heads/5615@{#936}) on port 38176
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+May 05, 2023 1:15:18 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+]]></system-err>
+  </testcase>
+  <testcase name="Example #1.1" classname="Examples" time="10.181">
+    <system-out><![CDATA[
+@login-page
+Scenario Outline: Check user is Login to the courier successfully &amp#27;[90m# newsbrandautomationsuitev3/login.feature:28&amp#27;[0m
+User accepted the privacy terms and conditions
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mUser click the i accept button&amp#27;[0m                             &amp#27;[90m# newsbrandautomationsuitev3.TheCourierLoginStepDefinition.u_ser_click_the_i_accept_button()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mUser hit the login link&amp#27;[0m                                     &amp#27;[90m# newsbrandautomationsuitev3.TheCourierLoginStepDefinition.user_hit_the_login_link()&amp#27;[0m
+Login Page
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mLogin page is open&amp#27;[0m                                         &amp#27;[90m# newsbrandautomationsuitev3.TheCourierLoginStepDefinition.login_page_is_open()&amp#27;[0m
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mEnter registered email id &amp#27;[0m&amp#27;[32m&amp#27;[1m"Tr123@gmail.com"&amp#27;[0m               &amp#27;[90m# newsbrandautomationsuitev3.TheCourierLoginStepDefinition.enter_registered_email_id(java.lang.String)&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mEnter valid password &amp#27;[0m&amp#27;[32m&amp#27;[1m"Asc@5672334"&amp#27;[0m                          &amp#27;[90m# newsbrandautomationsuitev3.TheCourierLoginStepDefinition.enter_valid_password(java.lang.String)&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mUser click on login button&amp#27;[0m                                 &amp#27;[90m# newsbrandautomationsuitev3.TheCourierLoginStepDefinition.user_click_on_login_button()&amp#27;[0m
+Home Page
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mUser  navigates to The courier home page&amp#27;[0m                   &amp#27;[90m# newsbrandautomationsuitev3.TheCourierLoginStepDefinition.user_navigates_to_the_courier_home_page()&amp#27;[0m
+User account is open
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mLogin Replaced with My Account link&amp#27;[0m                         &amp#27;[90m# newsbrandautomationsuitev3.TheCourierLoginStepDefinition.login_replaced_with_my_account_link()&amp#27;[0m
+]]></system-out>
+    <system-err><![CDATA[May 05, 2023 1:15:42 PM org.openqa.selenium.remote.DesiredCapabilities chrome
+INFO: Using `new ChromeOptions()` is preferred to `DesiredCapabilities.chrome()`
+Starting ChromeDriver 112.0.5615.49 (bd2a7bcb881c11e8cfe3078709382934e3916914-refs/branch-heads/5615@{#936}) on port 14788
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+May 05, 2023 1:15:43 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+]]></system-err>
+  </testcase>
+  <testcase name="Example #1.1" classname="Examples" time="8.361">
+    <failure message="expected:&lt;...ww.thecourier.co.uk/[]&gt; but was:&lt;...ww.thecourier.co.uk/[login/]&gt;" type="org.junit.ComparisonFailure"><![CDATA[org.junit.ComparisonFailure: expected:<...ww.thecourier.co.uk/[]> but was:<...ww.thecourier.co.uk/[login/]>
+	at org.junit.Assert.assertEquals(Assert.java:117)
+	at org.junit.Assert.assertEquals(Assert.java:146)
+	at newsbrandautomationsuitev3.TheCourierRegisterUserStepDefinition.user_should_navigates_to_the_courier_home_page(TheCourierRegisterUserStepDefinition.java:81)
+	at ✽.User should navigates to The courier home page(classpath:newsbrandautomationsuitev3/registeruser.feature:34)
+]]></failure>
+    <system-out><![CDATA[
+Scenario Outline: Successfully Register the User      &amp#27;[90m# newsbrandautomationsuitev3/registeruser.feature:38&amp#27;[0m
+User accepted the privacy terms and conditions
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mUser click the i accept button&amp#27;[0m                  &amp#27;[90m# newsbrandautomationsuitev3.TheCourierLoginStepDefinition.u_ser_click_the_i_accept_button()&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mUser hit the login link&amp#27;[0m                        &amp#27;[90m# newsbrandautomationsuitev3.TheCourierLoginStepDefinition.user_hit_the_login_link()&amp#27;[0m
+Login Page
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mLogin page is open&amp#27;[0m                             &amp#27;[90m# newsbrandautomationsuitev3.TheCourierLoginStepDefinition.login_page_is_open()&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mUser click on Click here to Register link&amp#27;[0m      &amp#27;[90m# newsbrandautomationsuitev3.TheCourierRegisterUserStepDefinition.user_click_on_click_here_to_register_link()&amp#27;[0m
+Register Page is open
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mRegister page is open&amp#27;[0m                          &amp#27;[90m# newsbrandautomationsuitev3.TheCourierRegisterUserStepDefinition.register_page_is_open()&amp#27;[0m
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mEnter register email Id &amp#27;[0m&amp#27;[32m&amp#27;[1m"Tr123@gmail.com"&amp#27;[0m     &amp#27;[90m# newsbrandautomationsuitev3.TheCourierRegisterUserStepDefinition.user_enter_email_id(java.lang.String)&amp#27;[0m
+Password Asc@5672334
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mEnter register password &amp#27;[0m&amp#27;[32m&amp#27;[1m"Asc@5672334"&amp#27;[0m         &amp#27;[90m# newsbrandautomationsuitev3.TheCourierRegisterUserStepDefinition.user_enter_password(java.lang.String)&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mUser hit the Create your account button&amp#27;[0m        &amp#27;[90m# newsbrandautomationsuitev3.TheCourierRegisterUserStepDefinition.user_hit_the_create_your_account_button()&amp#27;[0m
+  &amp#27;[31mThen &amp#27;[0m&amp#27;[31mUser should navigates to The courier home page&amp#27;[0m &amp#27;[90m# newsbrandautomationsuitev3.TheCourierRegisterUserStepDefinition.user_should_navigates_to_the_courier_home_page()&amp#27;[0m
+      &amp#27;[31morg.junit.ComparisonFailure: expected:<...ww.thecourier.co.uk/[]> but was:<...ww.thecourier.co.uk/[login/]>
+	at org.junit.Assert.assertEquals(Assert.java:117)
+	at org.junit.Assert.assertEquals(Assert.java:146)
+	at newsbrandautomationsuitev3.TheCourierRegisterUserStepDefinition.user_should_navigates_to_the_courier_home_page(TheCourierRegisterUserStepDefinition.java:81)
+	at ✽.User should navigates to The courier home page(classpath:newsbrandautomationsuitev3/registeruser.feature:34)
+&amp#27;[0m
+  &amp#27;[36mAnd &amp#27;[0m&amp#27;[36mLogin Replaced with My Account link&amp#27;[0m             &amp#27;[90m# newsbrandautomationsuitev3.TheCourierLoginStepDefinition.login_replaced_with_my_account_link()&amp#27;[0m
+
+    Embedding screen shot [image/png 59984 bytes]
+
+]]></system-out>
+    <system-err><![CDATA[May 05, 2023 1:16:07 PM org.openqa.selenium.remote.DesiredCapabilities chrome
+INFO: Using `new ChromeOptions()` is preferred to `DesiredCapabilities.chrome()`
+Starting ChromeDriver 112.0.5615.49 (bd2a7bcb881c11e8cfe3078709382934e3916914-refs/branch-heads/5615@{#936}) on port 34168
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+May 05, 2023 1:16:08 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+]]></system-err>
+  </testcase>
+  <testcase name="Example #1.2" classname="Examples" time="8.299">
+    <failure message="expected:&lt;...ww.thecourier.co.uk/[]&gt; but was:&lt;...ww.thecourier.co.uk/[login/]&gt;" type="org.junit.ComparisonFailure"><![CDATA[org.junit.ComparisonFailure: expected:<...ww.thecourier.co.uk/[]> but was:<...ww.thecourier.co.uk/[login/]>
+	at org.junit.Assert.assertEquals(Assert.java:117)
+	at org.junit.Assert.assertEquals(Assert.java:146)
+	at newsbrandautomationsuitev3.TheCourierRegisterUserStepDefinition.user_should_navigates_to_the_courier_home_page(TheCourierRegisterUserStepDefinition.java:81)
+	at ✽.User should navigates to The courier home page(classpath:newsbrandautomationsuitev3/registeruser.feature:34)
+]]></failure>
+    <system-out><![CDATA[
+Scenario Outline: Successfully Register the User        &amp#27;[90m# newsbrandautomationsuitev3/registeruser.feature:39&amp#27;[0m
+User accepted the privacy terms and conditions
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mUser click the i accept button&amp#27;[0m                    &amp#27;[90m# newsbrandautomationsuitev3.TheCourierLoginStepDefinition.u_ser_click_the_i_accept_button()&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mUser hit the login link&amp#27;[0m                          &amp#27;[90m# newsbrandautomationsuitev3.TheCourierLoginStepDefinition.user_hit_the_login_link()&amp#27;[0m
+Login Page
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mLogin page is open&amp#27;[0m                               &amp#27;[90m# newsbrandautomationsuitev3.TheCourierLoginStepDefinition.login_page_is_open()&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mUser click on Click here to Register link&amp#27;[0m        &amp#27;[90m# newsbrandautomationsuitev3.TheCourierRegisterUserStepDefinition.user_click_on_click_here_to_register_link()&amp#27;[0m
+Register Page is open
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mRegister page is open&amp#27;[0m                            &amp#27;[90m# newsbrandautomationsuitev3.TheCourierRegisterUserStepDefinition.register_page_is_open()&amp#27;[0m
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mEnter register email Id &amp#27;[0m&amp#27;[32m&amp#27;[1m"Pyui876.S12@yahoo.com"&amp#27;[0m &amp#27;[90m# newsbrandautomationsuitev3.TheCourierRegisterUserStepDefinition.user_enter_email_id(java.lang.String)&amp#27;[0m
+Password Abc#34567
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mEnter register password &amp#27;[0m&amp#27;[32m&amp#27;[1m"Abc#34567"&amp#27;[0m             &amp#27;[90m# newsbrandautomationsuitev3.TheCourierRegisterUserStepDefinition.user_enter_password(java.lang.String)&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mUser hit the Create your account button&amp#27;[0m          &amp#27;[90m# newsbrandautomationsuitev3.TheCourierRegisterUserStepDefinition.user_hit_the_create_your_account_button()&amp#27;[0m
+  &amp#27;[31mThen &amp#27;[0m&amp#27;[31mUser should navigates to The courier home page&amp#27;[0m   &amp#27;[90m# newsbrandautomationsuitev3.TheCourierRegisterUserStepDefinition.user_should_navigates_to_the_courier_home_page()&amp#27;[0m
+      &amp#27;[31morg.junit.ComparisonFailure: expected:<...ww.thecourier.co.uk/[]> but was:<...ww.thecourier.co.uk/[login/]>
+	at org.junit.Assert.assertEquals(Assert.java:117)
+	at org.junit.Assert.assertEquals(Assert.java:146)
+	at newsbrandautomationsuitev3.TheCourierRegisterUserStepDefinition.user_should_navigates_to_the_courier_home_page(TheCourierRegisterUserStepDefinition.java:81)
+	at ✽.User should navigates to The courier home page(classpath:newsbrandautomationsuitev3/registeruser.feature:34)
+&amp#27;[0m
+  &amp#27;[36mAnd &amp#27;[0m&amp#27;[36mLogin Replaced with My Account link&amp#27;[0m               &amp#27;[90m# newsbrandautomationsuitev3.TheCourierLoginStepDefinition.login_replaced_with_my_account_link()&amp#27;[0m
+
+    Embedding screen shot [image/png 60359 bytes]
+
+]]></system-out>
+    <system-err><![CDATA[May 05, 2023 1:16:15 PM org.openqa.selenium.remote.DesiredCapabilities chrome
+INFO: Using `new ChromeOptions()` is preferred to `DesiredCapabilities.chrome()`
+Starting ChromeDriver 112.0.5615.49 (bd2a7bcb881c11e8cfe3078709382934e3916914-refs/branch-heads/5615@{#936}) on port 15182
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+May 05, 2023 1:16:16 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+]]></system-err>
+  </testcase>
+  <testcase name="Negative checks on login page" classname="Test login functionality" time="9.976">
+    <system-out><![CDATA[
+Scenario: Negative checks on login page       &amp#27;[90m# newsbrandautomationsuitev3/login.feature:9&amp#27;[0m
+User accepted the privacy terms and conditions
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mUser click the i accept button&amp#27;[0m         &amp#27;[90m# newsbrandautomationsuitev3.TheCourierLoginStepDefinition.u_ser_click_the_i_accept_button()&amp#27;[0m
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mUser hit the login link&amp#27;[0m                 &amp#27;[90m# newsbrandautomationsuitev3.TheCourierLoginStepDefinition.user_hit_the_login_link()&amp#27;[0m
+Login Page
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mLogin page is open&amp#27;[0m                     &amp#27;[90m# newsbrandautomationsuitev3.TheCourierLoginStepDefinition.login_page_is_open()&amp#27;[0m
+GauracS@gmail.com - 2d@£4
+GauracS222@gmail - Abc@1234
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mUser enter login EmailID and password&amp#27;[0m &amp#27;[90m# newsbrandautomationsuitev3.TheCourierLoginStepDefinition.user_enter_email_id(io.cucumber.datatable.DataTable)&amp#27;[0m
+    | Email             | Password |
+    | GauracS@gmail.com | 2d@£4    |
+    | GauracS222@gmail  | Abc@1234 |
+]]></system-out>
+    <system-err><![CDATA[May 05, 2023 1:15:32 PM org.openqa.selenium.remote.DesiredCapabilities chrome
+INFO: Using `new ChromeOptions()` is preferred to `DesiredCapabilities.chrome()`
+Starting ChromeDriver 112.0.5615.49 (bd2a7bcb881c11e8cfe3078709382934e3916914-refs/branch-heads/5615@{#936}) on port 39937
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+May 05, 2023 1:15:33 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+]]></system-err>
+  </testcase>
+  <testcase name="Negative checks on Register the User" classname="Test Register user functionality" time="14.866">
+    <system-out><![CDATA[
+@RegisterUser
+Scenario: Negative checks on Register the User   &amp#27;[90m# newsbrandautomationsuitev3/registeruser.feature:13&amp#27;[0m
+User accepted the privacy terms and conditions
+  &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mUser click the i accept button&amp#27;[0m             &amp#27;[90m# newsbrandautomationsuitev3.TheCourierLoginStepDefinition.u_ser_click_the_i_accept_button()&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mUser hit the login link&amp#27;[0m                   &amp#27;[90m# newsbrandautomationsuitev3.TheCourierLoginStepDefinition.user_hit_the_login_link()&amp#27;[0m
+Login Page
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mLogin page is open&amp#27;[0m                        &amp#27;[90m# newsbrandautomationsuitev3.TheCourierLoginStepDefinition.login_page_is_open()&amp#27;[0m
+  &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mUser click on Click here to Register link&amp#27;[0m &amp#27;[90m# newsbrandautomationsuitev3.TheCourierRegisterUserStepDefinition.user_click_on_click_here_to_register_link()&amp#27;[0m
+Register Page is open
+  &amp#27;[32mThen &amp#27;[0m&amp#27;[32mRegister page is open&amp#27;[0m                     &amp#27;[90m# newsbrandautomationsuitev3.TheCourierRegisterUserStepDefinition.register_page_is_open()&amp#27;[0m
+deeT1101@gmail.com - Asc@567
+depikaT1101@gmail.com - 12345678
+deepikaT1101@gmail.com - qqqqqqqq
+deepikaT1101@gmail.com - qqqqqq23
+deepikaT1101@gmail.com - Asc@5678
+gaurav233@gmail - Asc@5678
+  &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mUser enter EmailID and password&amp#27;[0m          &amp#27;[90m# newsbrandautomationsuitev3.TheCourierRegisterUserStepDefinition.user_enter_email_id(io.cucumber.datatable.DataTable)&amp#27;[0m
+    | Email                  | Password |
+    | deeT1101@gmail.com     | Asc@567  |
+    | depikaT1101@gmail.com  | 12345678 |
+    | deepikaT1101@gmail.com | qqqqqqqq |
+    | deepikaT1101@gmail.com | qqqqqq23 |
+    | deepikaT1101@gmail.com | Asc@5678 |
+    | gaurav233@gmail        | Asc@5678 |
+]]></system-out>
+    <system-err><![CDATA[May 05, 2023 1:15:52 PM org.openqa.selenium.remote.DesiredCapabilities chrome
+INFO: Using `new ChromeOptions()` is preferred to `DesiredCapabilities.chrome()`
+Starting ChromeDriver 112.0.5615.49 (bd2a7bcb881c11e8cfe3078709382934e3916914-refs/branch-heads/5615@{#936}) on port 42591
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+May 05, 2023 1:15:53 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+]]></system-err>
+  </testcase>
+</testsuite>

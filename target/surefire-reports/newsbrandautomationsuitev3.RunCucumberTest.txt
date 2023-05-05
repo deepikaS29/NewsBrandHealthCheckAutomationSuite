@@ -1,0 +1,18 @@
+-------------------------------------------------------------------------------
+Test set: newsbrandautomationsuitev3.RunCucumberTest
+-------------------------------------------------------------------------------
+Tests run: 8, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 131.897 s <<< FAILURE! - in newsbrandautomationsuitev3.RunCucumberTest
+Examples.Example #1.1  Time elapsed: 8.361 s  <<< FAILURE!
+org.junit.ComparisonFailure: expected:<...ww.thecourier.co.uk/[]> but was:<...ww.thecourier.co.uk/[login/]>
+	at org.junit.Assert.assertEquals(Assert.java:117)
+	at org.junit.Assert.assertEquals(Assert.java:146)
+	at newsbrandautomationsuitev3.TheCourierRegisterUserStepDefinition.user_should_navigates_to_the_courier_home_page(TheCourierRegisterUserStepDefinition.java:81)
+	at ✽.User should navigates to The courier home page(classpath:newsbrandautomationsuitev3/registeruser.feature:34)
+
+Examples.Example #1.2  Time elapsed: 8.299 s  <<< FAILURE!
+org.junit.ComparisonFailure: expected:<...ww.thecourier.co.uk/[]> but was:<...ww.thecourier.co.uk/[login/]>
+	at org.junit.Assert.assertEquals(Assert.java:117)
+	at org.junit.Assert.assertEquals(Assert.java:146)
+	at newsbrandautomationsuitev3.TheCourierRegisterUserStepDefinition.user_should_navigates_to_the_courier_home_page(TheCourierRegisterUserStepDefinition.java:81)
+	at ✽.User should navigates to The courier home page(classpath:newsbrandautomationsuitev3/registeruser.feature:34)
+

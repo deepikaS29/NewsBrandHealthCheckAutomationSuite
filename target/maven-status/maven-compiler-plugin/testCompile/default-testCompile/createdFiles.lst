@@ -1,0 +1,10 @@
+newsbrandautomationsuitev3\Hooks.class
+utilities\CommonLibrary.class
+Pages\ScrollersPage.class
+Pages\HomePage.class
+newsbrandautomationsuitev3\TheCourierRegisterUserStepDefinition.class
+newsbrandautomationsuitev3\HomePageMenuListStepDefinition.class
+newsbrandautomationsuitev3\TheCourierLoginStepDefinition.class
+Pages\RegistrationPage.class
+Pages\LoginPage.class
+newsbrandautomationsuitev3\RunCucumberTest.class

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Cucumber" time="116.425" tests="8" skipped="0" failures="2" errors="0">
+<testcase classname="Verify Home Page Features" name="Verify Menu Options" time="7.778">
+<system-out><![CDATA[
+When User click the i accept button.........................................passed
+And Click on Menu option....................................................passed
+Then Verify all links like News,Politics,Sports,Lifestyle etc...............passed
+And Take screenshot of the page.............................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Verify Home Page Features" name="Verify Menu tabs" time="41.047">
+<system-out><![CDATA[
+When User click the i accept button.........................................passed
+Then verify and click all tabs like News,Politics,Sports,Lifestyle etc......passed
+And Take screenshot of the page.............................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Verify Home Page Features" name="Verify the search details - Example #1.1" time="15.005">
+<system-out><![CDATA[
+When User click the i accept button.........................................passed
+And click on searchIcon and enter keyword "life"............................passed
+And click Go button.........................................................passed
+Then verify the search details "life".......................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Test login functionality" name="Negative checks on login page" time="10.446">
+<system-out><![CDATA[
+When User click the i accept button.........................................passed
+And User hit the login link.................................................passed
+Then Login page is open.....................................................passed
+Given User enter login EmailID and password.................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Test login functionality" name="Check user is Login to the courier successfully - Example #1.1" time="10.51">
+<system-out><![CDATA[
+When User click the i accept button.........................................passed
+And User hit the login link.................................................passed
+Then Login page is open.....................................................passed
+Given Enter registered email id "Tr123@gmail.com"...........................passed
+And Enter valid password "Asc@5672334"......................................passed
+When User click on login button.............................................passed
+Then User  navigates to The courier home page...............................passed
+And Login Replaced with My Account link.....................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Test Register user functionality" name="Negative checks on Register the User" time="13.95">
+<system-out><![CDATA[
+And User click the i accept button..........................................passed
+When User hit the login link................................................passed
+Then Login page is open.....................................................passed
+When User click on Click here to Register link..............................passed
+Then Register page is open..................................................passed
+Given User enter EmailID and password.......................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Test Register user functionality" name="Successfully Register the User - Example #1.1" time="8.918">
+<failure type="org.junit.ComparisonFailure" message="expected:&lt;...ww.thecourier.co.uk/[]&gt; but was:&lt;...ww.thecourier.co.uk/[login/]&gt;">
+<![CDATA[org.junit.ComparisonFailure: expected:<...ww.thecourier.co.uk/[]> but was:<...ww.thecourier.co.uk/[login/]>
+	at org.junit.Assert.assertEquals(Assert.java:117)
+	at org.junit.Assert.assertEquals(Assert.java:146)
+	at newsbrandautomationsuitev3.TheCourierRegisterUserStepDefinition.user_should_navigates_to_the_courier_home_page(TheCourierRegisterUserStepDefinition.java:81)
+	at ✽.User should navigates to The courier home page(classpath:newsbrandautomationsuitev3/registeruser.feature:34)
+]]>
+</failure>
+<system-out><![CDATA[
+And User click the i accept button..........................................passed
+When User hit the login link................................................passed
+Then Login page is open.....................................................passed
+When User click on Click here to Register link..............................passed
+Then Register page is open..................................................passed
+Given Enter register email Id "Tr123@gmail.com".............................passed
+Given Enter register password "Asc@5672334".................................passed
+When User hit the Create your account button................................passed
+Then User should navigates to The courier home page.........................failed
+And Login Replaced with My Account link.....................................skipped
+]]></system-out>
+</testcase>
+<testcase classname="Test Register user functionality" name="Successfully Register the User - Example #1.2" time="8.595">
+<failure type="org.junit.ComparisonFailure" message="expected:&lt;...ww.thecourier.co.uk/[]&gt; but was:&lt;...ww.thecourier.co.uk/[login/]&gt;">
+<![CDATA[org.junit.ComparisonFailure: expected:<...ww.thecourier.co.uk/[]> but was:<...ww.thecourier.co.uk/[login/]>
+	at org.junit.Assert.assertEquals(Assert.java:117)
+	at org.junit.Assert.assertEquals(Assert.java:146)
+	at newsbrandautomationsuitev3.TheCourierRegisterUserStepDefinition.user_should_navigates_to_the_courier_home_page(TheCourierRegisterUserStepDefinition.java:81)
+	at ✽.User should navigates to The courier home page(classpath:newsbrandautomationsuitev3/registeruser.feature:34)
+]]>
+</failure>
+<system-out><![CDATA[
+And User click the i accept button..........................................passed
+When User hit the login link................................................passed
+Then Login page is open.....................................................passed
+When User click on Click here to Register link..............................passed
+Then Register page is open..................................................passed
+Given Enter register email Id "Pyui876.S12@yahoo.com".......................passed
+Given Enter register password "Abc#34567"...................................passed
+When User hit the Create your account button................................passed
+Then User should navigates to The courier home page.........................failed
+And Login Replaced with My Account link.....................................skipped
+]]></system-out>
+</testcase>
+</testsuite>
